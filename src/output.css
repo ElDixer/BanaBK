@@ -567,6 +567,11 @@ video {
   margin-right: 10rem;
 }
 
+.mx-56 {
+  margin-left: 14rem;
+  margin-right: 14rem;
+}
+
 .ml-24 {
   margin-left: 6rem;
 }
@@ -751,6 +756,30 @@ video {
   height: 24rem;
 }
 
+.h-\[50vh\] {
+  height: 50vh;
+}
+
+.h-\[60vh\] {
+  height: 60vh;
+}
+
+.h-\[0vh\] {
+  height: 0vh;
+}
+
+.h-\[75vh\] {
+  height: 75vh;
+}
+
+.h-\[vh\] {
+  height: vh;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
 .w-24 {
   width: 6rem;
 }
@@ -813,6 +842,42 @@ video {
 
 .w-7 {
   width: 1.75rem;
+}
+
+.w-\[50\] {
+  width: 50;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[40\%\] {
+  width: 40%;
+}
+
+.w-\[35\%\] {
+  width: 35%;
+}
+
+.w-\[23\%\] {
+  width: 23%;
+}
+
+.w-\[48\%\] {
+  width: 48%;
+}
+
+.w-\[\%\] {
+  width: %;
+}
+
+.w-\[45\%\] {
+  width: 45%;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 @keyframes bounce {
@@ -896,6 +961,10 @@ video {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1368,6 +1437,11 @@ video {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .backdrop-blur-sm {
