@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <!-- NAVBAR -->
+    <header>
+        <nav class="w-[97%] h-[7vh] flex justify-between bg-blue-600 text-center items-center fixed backdrop-blur-sm bg-opacity-50 mt-10 ml-5 rounded-full z-10">
+            <div class="ml-24">LOGO BKV+</div>
+            <ul class="flex mr-20 gap-14 font-bold text-white">
+                <li class="cursor-pointer"> Accueil</li>
+                <li class="cursor-pointer"> <a href="./shop.html"> Shop </a></li>
+                <li class="cursor-pointer"> A propos</li>
+                <li class="cursor-pointer"> Donation</li>
+                <li class="cursor-pointer"> Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- PAGE HEADER -->
+<div class="h-[15vh]"></div>
+  <section class="px-6 py-10 text-center">
+    <h2 class="text-3xl font-bold">Shop Bukavu Positive</h2>
+    <p class="mt-2 text-gray-600">
+        Des vêtements streetwear inspirés par la culture, la fierté et la positivité.
+    </p>
+  </section>
+
+  <!-- FILTERS (UI ONLY) -->
+  <section class="px-6 mb-6">
+    <div class="flex flex-wrap gap-3 justify-center">
+      <button class="px-4 py-2 border rounded-full text-sm hover:bg-accent hover:text-white">All</button>
+      <button class="px-4 py-2 border rounded-full text-sm hover:bg-accent hover:text-white">T-Shirts</button>
+      <button class="px-4 py-2 border rounded-full text-sm hover:bg-accent hover:text-white">Hoodies</button>
+      <button class="px-4 py-2 border rounded-full text-sm hover:bg-accent hover:text-white">Caps</button>
+    </div>
+  </section>
+
+  <!-- PRODUCTS GRID COLLECTION HOODIE-->
+    <section class="px-6 pb-8">
+        <h2 class="text-center p-6"> Collection hoodie</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-40">
+
+            <!-- PRODUCT CARD -->
+            <div class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                <img src="assets/images/person.jpg" alt="Bukavu Tee" class="w-full h-48 object-cover">
+                <div class="p-4">
+                <h3 class="font-semibold">Bukavu Spirit Tee</h3>
+                <p class="text-sm text-gray-500">Premium Cotton</p>
+                <div class="flex items-center justify-between mt-3">
+                    <span class="font-bold">$15</span>
+                    <a href="product.html" class="text-sm text-accent font-semibold">View</a>
+                </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT CARD -->
+            <div class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                <img src="assets/images/person.jpg" alt="Bukavu Hoodie" class="w-full h-48 object-cover">
+                <div class="p-4">
+                <h3 class="font-semibold">Bukavu Positive Hoodie</h3>
+                <p class="text-sm text-gray-500">Warm & Bold</p>
+                <div class="flex items-center justify-between mt-3">
+                    <span class="font-bold">$30</span>
+                    <a href="product.html" class="text-sm text-accent font-semibold">View</a>
+                </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT CARD -->
+            <div class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                <img src="assets/images/person.jpg" alt="Bukavu Cap" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold">Bukavu Pride Cap</h3>
+                    <p class="text-sm text-gray-500">Street Style</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <span class="font-bold">$10</span>
+                        <a href="product.html" class="text-sm text-accent font-semibold">View</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DUPLICATE CARD FOR MORE PRODUCTS -->
+            <div class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                <img src="assets/images/person.jpg" alt="Bukavu Tee" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold">Bukavu Classic Tee</h3>
+                    <p class="text-sm text-gray-500">Minimal Design</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <span class="font-bold">$15</span>
+                        <a href="product.html" class="text-sm text-accent font-semibold">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-3 text-sm text-gray-500">
+    © 2025 Bukavu Positive. All rights reserved.
+  </footer>
+
+</body>
+</html>
