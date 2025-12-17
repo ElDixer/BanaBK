@@ -9,7 +9,12 @@
 <body class="bg-[#B3CFE5] text-[#0A1931]">
     <header>
         <nav class="w-[97%] h-[7vh] flex justify-between bg-[#0A1931] text-center items-center fixed backdrop-blur-sm bg-opacity-80 mt-10 ml-5 rounded-full z-10">
-            <div class="ml-24">LOGO BKV+</div>
+            <div class="ml-24">
+                <a href="./index.html" class="flex text-white justify-center items-center gap-2">
+                    <img src="./Assets/images/logo bkv afro white.png" alt="" class="w-12 h-12">
+                    <p class="font-bold">Bukavu Positive</p>
+                </a>
+            </div>
             <ul class="flex mr-20 gap-14 font-bold text-white">
                 <li class="cursor-pointer"> Accueil</li>
                 <li class="cursor-pointer"> <a href="./shop.html"> Shop </a></li>
@@ -20,7 +25,7 @@
         </nav>
     </header>
 
-    <div class="h-[15vh]"></div>
+    <div class="h-[17vh]"></div>
 
     <section>
         <div class="mx-56 flex gap-16">
@@ -36,13 +41,13 @@
                     <img src="./Assets/images/afriq.jpg" alt="" class="w-full h-20 object-cover">
                 </div>
             </div>
-            <div class="flex-grow">
+            <div class="flex-grow mr-40">
                 <h1 class="font-bold text-2xl"> HOODIE COLLECTION </h1>
                 <h2> Homme</h2>
                 <h3 class="font-semibold text-2xl mt-3">15$</h3>
                 <div>
                     <h4 class="font-semibold mt-10 mb-3"> Description</h4>
-                    <p class="mr-36">Red, Black & Grey Cap with embroidery label VRGL of your choice. Great for casual wear.
+                    <p>Red, Black & Grey Cap with embroidery label VRGL of your choice. Great for casual wear.
                         Red, Black & Grey Cap with embroidery label VRGL of your choice. Great for casual wear.
                     </p>
                 </div>
@@ -63,15 +68,117 @@
                             <button type="button" id="decrement-button" data-input-counter-decrement="quantity-input" class="border focus:ring-4 font-medium text-sm px-3 focus:outline-none h-10">
                                  -
                             </button>
-                            <input type="text" id="quantity-input" data-input-counter aria-describedby="helper-text-explanation" class="border-x-0 h-10 text-center w-full py-2.5" placeholder="0" required />
+                            <input type="text" id="quantity-input" data-input-counter class="border-x-0 h-10 text-center w-full py-2.5" placeholder="0" required />
                             <button type="button" id="increment-button" data-input-counter-increment="quantity-input" class="border focus:ring-4 font-medium text-sm px-3 focus:outline-none h-10">
                                 +
                             </button>
                         </div>
                     </form>
                 </div>
+                <button class="w-full h-14 border mt-5 bg-[#0A1931] text-white font-semibold rounded-lg"> Ajouter au Panier</button>
+                <button class="w-full h-14 border mt-5 bg-[#0A1931] text-white font-semibold rounded-lg">Payer maintenant</button>
             </div>
         </div>
     </section>
+
+    <section>
+        <div class="mt-20">
+            <h2 class="text-center p-6 text-xl font-semibold mb-10"> Vous pourriez aussi aimer...</h2>
+            <div class="grid grid-cols-5 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-40">
+
+                <!-- PRODUCT CARD -->
+                <div class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/images/person.jpg" alt="Bukavu Tee" class="w-full h-96 object-cover">
+                    <div class="p-4">
+                    <h3 class="font-semibold">Bukavu Spirit Tee</h3>
+                    <p class="text-sm text-gray-500">Premium Cotton</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <span class="font-bold">$15</span>
+                        <a href="product.html" class="text-sm text-accent font-semibold">Voir</a>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARD -->
+                <div class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/images/person.jpg" alt="Bukavu Hoodie" class="w-full h-96 object-cover">
+                    <div class="p-4">
+                    <h3 class="font-semibold">Bukavu Positive Hoodie</h3>
+                    <p class="text-sm text-gray-500">Warm & Bold</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <span class="font-bold">$30</span>
+                        <a href="product.html" class="text-sm text-accent font-semibold">Voir</a>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARD -->
+                <div class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/images/person.jpg" alt="Bukavu Cap" class="w-full h-96 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold">Bukavu Pride Cap</h3>
+                        <p class="text-sm text-gray-500">Street Style</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <span class="font-bold">$10</span>
+                            <a href="product.html" class="text-sm text-accent font-semibold">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DUPLICATE CARD FOR MORE PRODUCTS -->
+                <div class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/images/person.jpg" alt="Bukavu Tee" class="w-full h-96 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold">Bukavu Classic Tee</h3>
+                        <p class="text-sm text-gray-500">Minimal Design</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <span class="font-bold">$15</span>
+                            <a href="product.html" class="text-sm text-accent font-semibold">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="flex gap-10 text-center justify-center items-center bg-[#0A1931] text-white p-10">
+            <p class="cursor-pointer">Cliquez ici pour decouvrir les entreprise qui supporte bukavu positive</p>
+            <div>
+                <img src="./Assets/images/rightarrow.png" alt="right arrow" class="w-12 h-12 animate-bounce hover:animate-none cursor-pointer">
+            </div>
+        </div>
+     </section>
+    <footer class="mt-20"> 
+        <div class="flex gap-10 ml-40">
+            <div>
+                <h3>Logo BKV+</h3>
+                <p> BKV+, La marque qui célèbre Bukavu, son énergie, sa culture et son futur.</p>
+            </div>
+            <div>
+                <div>
+                    <h3> Quick link</h3>
+                    <ul class="flex gap-5 font-semibold mt-5">
+                        <li class="cursor-pointer"> Accueil</li>
+                        <li class="cursor-pointer"> Shop</li>
+                        <li class="cursor-pointer"> A propos</li>
+                        <li class="cursor-pointer"> Donation</li>
+                        <li class="cursor-pointer"> Contact</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Social media</h3>
+                    <div class="flex gap-5 mt-5">
+                        <a href="instagram.com"> Instagram</a>
+                        <a href="instagram.com"> Instagram</a>
+                        <a href="instagram.com"> Instagram</a>
+                        <a href="instagram.com"> Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-12 text-sm text-gray-500">
+            <p> © 2025 dixer-Group . All right reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
