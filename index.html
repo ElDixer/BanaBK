@@ -8,99 +8,107 @@
 </head>
 <body class="bg-[#B3CFE5] text-[#0A1931]">
     <header>
-        <nav class="w-[97%] h-[7vh] flex justify-between bg-[#0A1931] text-center items-center fixed backdrop-blur-sm bg-opacity-80 mt-10 ml-5 rounded-full z-10">
-            <div class="ml-24">
-                <a href="./index.html" class="flex text-gray-400 hover:text-white justify-center items-center gap-2">
-                    <img src="./Assets/images/logo bkv afro white.png" alt="" class="w-12 h-12">
-                    <p class="font-bold">Bukavu Positive</p>
-                </a>
-            </div>
-            <ul class="flex mr-20 gap-14 font-bold text-gray-400 items-center relative active:text-white">
-                <li class="cursor-pointer hover:text-white"> <a href="#"> Acceuil </a></li>
-                <li class="cursor-pointer hover:text-white"> <a href="./shop.html"> Shop </a></li>
-                <li class="cursor-pointer hover:text-white"> <a href="./contact.html"> Contact </a></li>
-                <li class="cursor-pointer hover:text-white"> <a href="./dontation.html"> Donation </a></li>
-                <img src="./Assets/images/cart-icon-gray.png" alt="shopping cart icon" class="w-10 h-10 mr-10 ">
-                <span class="w-5 h-5 bg-white rounded-full absolute top-0 right-12 flex text-center items-center justify-center text-black text-xs">0</span>
+        <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] h-[70px] flex justify-between items-center bg-[#0A1931]/80 backdrop-blur-sm rounded-full z-50 px-10">
+            <a href="./index.html" class="flex items-center gap-2 text-gray-300 hover:text-white">
+                <img src="./Assets/images/logo bkv afro white.png" class="w-10 h-10" />
+                <span class="font-bold hidden sm:block">Bukavu Positive</span>
+            </a>
+            <ul class="hidden md:flex gap-10 font-bold text-gray-300 items-center">
+                <li><a href="#" class="hover:text-white">Accueil</a></li>
+                <li><a href="./shop.html" class="hover:text-white">Shop</a></li>
+                <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
+                <li><a href="./dontation.html" class="hover:text-white">Donation</a></li>
+                <li class="relative">
+                    <img src="./Assets/images/cart-icon-gray.png" class="w-8 h-8" />
+                    <span class="absolute -top-2 -right-2 w-5 h-5 bg-white text-black text-xs rounded-full flex items-center justify-center">0</span>
+                </li>
             </ul>
         </nav>
     </header>
-    <section class="w-full h-[100vh]">
-        <div class="h-[25vh]"></div>
-            <div class="ml-40 mt-32">
-                <h1 class="text-3xl font-extrabold"> BKV+ — Parce que Bukavu mérite d’être raconté.</h1>
-                <p class="text-2xl mt-8"> Chaque sourire, chaque rue, chaque montagne et chaque instant de notre ville porte une histoire. <br>
-                    BKV+, La marque qui célèbre Bukavu, son énergie, sa culture et son futur. <br>
-                    Nous la portons fièrement… et nous la partageons au monde.
-                </p>
-                <div class="mt-16 flex gap-10 text-white">
-                    <button class="w-auto h-[5vh] p-3 bg-[#0A1931] rounded-md font-bold hover:border hover:bg-[#B3CFE5] hover:text-[#0A1931] transition">Découvrir la collection</button>
-                    <button class="w-auto h-[5vh] p-3 bg-[#0A1931] rounded-md font-bold hover:border hover:bg-[#B3CFE5] hover:text-[#0A1931] transition"> Soutenir la ville</button>
-                </div>
+    <!-- HERO -->
+    <section class="min-h-screen flex items-center px-6 md:px-16 lg:px-40 pt-32">
+        <div class="max-w-3xl">
+            <h1 class="text-3xl md:text-4xl font-extrabold">
+                BKV+ — Parce que Bukavu mérite d’être raconté.
+            </h1>
+            <p class="text-lg md:text-2xl mt-8"> Chaque sourire, chaque rue, chaque montagne raconte une histoire. BKV+ célèbre Bukavu, son énergie et son futur. </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a href="./shop.html" class="bg-[#0A1931] text-white px-6 py-3 rounded-md font-bold text-center hover:bg-white hover:text-[#0A1931] transition">
+                Découvrir la collection
+            </a>
+            <button class="bg-[#0A1931] text-white px-6 py-3 rounded-md font-bold hover:bg-white hover:text-[#0A1931] transition">
+                Soutenir la ville
+            </button>
             </div>
+        </div>
     </section>
-    <section>
-        <h2 class="mt-10 text-center font-black text-3xl"> Découvrez la collection BKV+ </h2>
-        <p class="mt-3 text-center font-normal text-xl">Des designs minimalistes, modernes et unisexes qui représentent la fierté de Bukavu.</p>
-        <div class="grid grid-cols-4 gap-8 mx-40 mt-20">
-            <div class="border shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:shadow-[#0A1931] transition">
-                <div class="aspect-square bg-gray-500">
-                    <img src="/Assets/images/person.jpg" alt="image product" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4 space-y-2 text-center">
-                    <h3 class="text-lg font-semibold line-clamp2-"> T shirt bkv+</h3>
-                    <p  class="text-xl font-bold"> 50$</p>
-                    <button class="w-full bg-[#0A1931] text-white py-2 rounded-lg font-extrabold"> Ajouter au panier</button>
-                </div>
-            </div>
-            <div class="border shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:shadow-[#0A1931] transition">
-                <div class="aspect-square bg-gray-500">
-                    <img src="/Assets/images/person.jpg" alt="image product" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4 space-y-2 text-center">
-                    <h3 class="text-lg font-semibold line-clamp2-"> T shirt bkv+</h3>
-                    <p  class="text-xl font-bold"> 50$</p>
-                    <button class="w-full bg-[#0A1931] text-white py-2 rounded-lg font-extrabold"> Ajouter au panier</button>
+    <!-- COLLECTION -->
+    <section class="px-6 md:px-16 lg:px-40">
+        <h2 class="text-center font-black text-3xl">Découvrez la collection BKV+</h2>
+        <p class="text-center text-xl mt-3">Designs modernes et unisexes</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+            <!-- CARD -->
+            <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                <img src="./Assets/images/person.jpg" class="aspect-square object-cover w-full" />
+                <div class="p-4 text-center space-y-2">
+                    <h3 class="font-semibold">T-shirt BKV+</h3>
+                    <p class="font-bold text-xl">50$</p>
+                    <button class="w-full bg-[#0A1931] text-white py-2 rounded-lg font-bold">
+                    Ajouter au panier
+                    </button>
                 </div>
             </div>
-            <div class="border shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:shadow-[#0A1931] transition">
-                <div class="aspect-square bg-gray-500">
-                    <img src="/Assets/images/person.jpg" alt="image product" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4 space-y-2 text-center">
-                    <h3 class="text-lg font-semibold line-clamp2-"> T shirt bkv+</h3>
-                    <p  class="text-xl font-bold"> 50$</p>
-                    <button class="w-full bg-[#0A1931] text-white py-2 rounded-lg font-extrabold"> Ajouter au panier</button>
+            <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                <img src="./Assets/images/person.jpg" class="aspect-square object-cover w-full" />
+                <div class="p-4 text-center space-y-2">
+                    <h3 class="font-semibold">T-shirt BKV+</h3>
+                    <p class="font-bold text-xl">50$</p>
+                    <button class="w-full bg-[#0A1931] text-white py-2 rounded-lg font-bold">
+                    Ajouter au panier
+                    </button>
                 </div>
             </div>
-            <div class="border shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:shadow-[#0A1931] transition">
-                <div class="aspect-square bg-gray-500">
-                    <img src="/Assets/images/person.jpg" alt="image product" class="w-full h-full object-cover">
+            <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                <img src="./Assets/images/person.jpg" class="aspect-square object-cover w-full" />
+                <div class="p-4 text-center space-y-2">
+                    <h3 class="font-semibold">T-shirt BKV+</h3>
+                    <p class="font-bold text-xl">50$</p>
+                    <button class="w-full bg-[#0A1931] text-white py-2 rounded-lg font-bold">
+                    Ajouter au panier
+                    </button>
                 </div>
-                <div class="p-4 space-y-2 text-center">
-                    <h3 class="text-lg font-semibold line-clamp2-"> T shirt bkv+</h3>
-                    <p  class="text-xl font-bold"> 50$</p>
-                    <button class="w-full bg-[#0A1931] text-white py-2 rounded-lg font-extrabold"> Ajouter au panier</button>
+            </div>
+            <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                <img src="./Assets/images/person.jpg" class="aspect-square object-cover w-full" />
+                <div class="p-4 text-center space-y-2">
+                    <h3 class="font-semibold">T-shirt BKV+</h3>
+                    <p class="font-bold text-xl">50$</p>
+                    <button class="w-full bg-[#0A1931] text-white py-2 rounded-lg font-bold">
+                    Ajouter au panier
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="mt-10 flex items-center justify-center">
-            <button class="p-4 rounded-lg border-[#0A1931] border hover:shadow-md hover:shadow-[#0A1931] transition font-semibold"> <a href="./shop.html">Découvrir la collection</a></button>
+        <div class="mt-10 text-center">
+            <a href="./shop.html" class="bg-[#0A1931] text-white px-6 py-3 rounded-md font-bold text-center hover:bg-white hover:text-[#0A1931] transition">
+                Voir plus
+            </a>
         </div>
-        <hr class="mt-10 mx-40">
+        
     </section>
-    <section class="w-full h-[70vh] flex items-center justify-center gap-20"> 
-        <div class="w-[25%] h-[50%] backdrop-blur-sm bg-opacity-20 rounded-lg border-2 border-[#0A1931]">
-            <img src="./Assets/images/puce.jpg" alt="person inside" class="object-cover w-full h-full">
-        </div>
+
+    <!-- NFC SECTION -->
+    <section class="px-6 md:px-16 lg:px-40 mt-24 flex flex-col lg:flex-row items-center gap-10">
         <div>
-            <h3 class="text-2xl font-extrabold"> Mode + Technologie : l’innovation BKV </h3>
-            <p class="text-xl mt-14">Chaque article BKV+ contient une puce NFC intégrée. En le touchant avec un smartphone, <br>
+            <h3 class="text-2xl font-extrabold">Mode + Technologie: L'innvation bkv+</h3>
+            <p class="text-xl mt-6">Chaque article BKV+ contient une puce NFC intégrée. En le touchant avec un smartphone, <br>
                 vous accédez à: Notre mission. Nos projets communautaires. La possibilité de faire un don. <br>
                 L’impact réel créé à Bukavu. Votre style devient un acte positif en rdc.
             </p>
         </div>
     </section>
+
     <section class="mt-10 mx-40">
         <h2 class="text-3xl font-extrabold text-center">Comment ça marche ? </h2>
         <div class="grid grid-cols-4 font-semibold mt-10 gap-10">
