@@ -1006,13 +1006,26 @@ video {
   border-width: 1px;
 }
 
+.border-0 {
+  border-width: 0px;
+}
+
 .border-x-0 {
   border-left-width: 0px;
   border-right-width: 0px;
 }
 
+.border-x {
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+
 .border-t {
   border-top-width: 1px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
 }
 
 .border-\[\#0A1931\] {
@@ -1027,6 +1040,29 @@ video {
 
 .border-white\/30 {
   border-color: rgb(255 255 255 / 0.3);
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+
+.border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+}
+
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity, 1));
+}
+
+.border-opacity-30 {
+  --tw-border-opacity: 0.3;
+}
+
+.border-opacity-80 {
+  --tw-border-opacity: 0.8;
 }
 
 .bg-\[\#0A1931\] {
@@ -1062,6 +1098,42 @@ video {
 
 .bg-\[\'url\(\.\/src\/assets\/images\/bgou\.jpg\)\'\] {
   background-color: 'url(./src/assets/images/bgou.jpg)';
+}
+
+.bg-\[\'url\(\"\"\.\/src\/assets\/images\/bgou\.jpg\)\'\] {
+  background-color: 'url(""./src/assets/images/bgou.jpg)';
+}
+
+.bg-\[\#0A1930\]\/80 {
+  background-color: rgb(10 25 48 / 0.8);
+}
+
+.bg-\[\#0A1932\]\/80 {
+  background-color: rgb(10 25 50 / 0.8);
+}
+
+.bg-\[\#1A1931\]\/80 {
+  background-color: rgb(26 25 49 / 0.8);
+}
+
+.bg-\[\#ffffff\]\/80 {
+  background-color: rgb(255 255 255 / 0.8);
+}
+
+.bg-\[\#ffffff\]\/30 {
+  background-color: rgb(255 255 255 / 0.3);
+}
+
+.bg-gray-700\/30 {
+  background-color: rgb(55 65 81 / 0.3);
+}
+
+.bg-gray-700\/50 {
+  background-color: rgb(55 65 81 / 0.5);
+}
+
+.bg-gray-700\/70 {
+  background-color: rgb(55 65 81 / 0.7);
 }
 
 .bg-opacity-80 {
@@ -1110,6 +1182,46 @@ video {
 
 .bg-\[url\(\.\/src\/assets\/images\/bgou\.jpg\)\'\'\] {
   background-image: url(./src/assets/images/bgou.jpg)'';
+}
+
+.bg-\[url\(\'\.\/src\/assets\/images\/bgou\.jpg\'\)\] {
+  background-image: url('./src/assets/images/bgou.jpg');
+}
+
+.bg-\[url\(\'\/path-to-your-image\.jpg\'\)\] {
+  background-image: url('/path-to-your-image.jpg');
+}
+
+.bg-\[url\(\'\/\'\)\] {
+  background-image: url('/');
+}
+
+.bg-\[url\(\'\/\.\/\'\)\] {
+  background-image: url('/./');
+}
+
+.bg-\[url\(\'\/assets\'\)\] {
+  background-image: url('/assets');
+}
+
+.bg-\[url\(\'\/assets\/\'\)\] {
+  background-image: url('/assets/');
+}
+
+.bg-\[url\(\'\/assets\/images\'\)\] {
+  background-image: url('/assets/images');
+}
+
+.bg-\[url\(\'\/assets\/images\/\'\)\] {
+  background-image: url('/assets/images/');
+}
+
+.bg-\[url\(\'\/assets\/images\/bgou\'\)\] {
+  background-image: url('/assets/images/bgou');
+}
+
+.bg-\[url\(\'\/assets\/images\/bgou\.jpg\'\)\] {
+  background-image: url('/assets/images/bgou.jpg');
 }
 
 .bg-cover {
@@ -1303,6 +1415,16 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#B3CFE5\] {
+  --tw-text-opacity: 1;
+  color: rgb(179 207 229 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
 }
 
 .shadow {
