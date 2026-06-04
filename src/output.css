@@ -1047,6 +1047,10 @@ video {
   background-color: rgb(16 39 75 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#10274b\]\/20 {
+  background-color: rgb(16 39 75 / 0.2);
+}
+
 .bg-\[\#B3CFE5\] {
   --tw-bg-opacity: 1;
   background-color: rgb(179 207 229 / var(--tw-bg-opacity, 1));
@@ -1059,22 +1063,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#10274b\]\/30 {
-  background-color: rgb(16 39 75 / 0.3);
-}
-
-.bg-\[\#10274b\]\/50 {
-  background-color: rgb(16 39 75 / 0.5);
-}
-
-.bg-\[\#10274b\]\/0 {
-  background-color: rgb(16 39 75 / 0);
-}
-
-.bg-\[\#10274b\]\/20 {
-  background-color: rgb(16 39 75 / 0.2);
 }
 
 .bg-opacity-80 {
@@ -1305,12 +1293,6 @@ video {
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
-.backdrop-blur-md {
-  --tw-backdrop-blur: blur(12px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1343,34 +1325,8 @@ video {
   animation: none;
 }
 
-.hover\:bg-white:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:bg-\[\#10274b\]\/20:hover {
-  background-color: rgb(16 39 75 / 0.2);
-}
-
-.hover\:bg-\[\#10274b\]\/0:hover {
-  background-color: rgb(16 39 75 / 0);
-}
-
-.hover\:bg-\[\#10274b\]\/50:hover {
-  background-color: rgb(16 39 75 / 0.5);
-}
-
-.hover\:bg-\[\#10274b\]\/80:hover {
-  background-color: rgb(16 39 75 / 0.8);
-}
-
 .hover\:bg-\[\#10274b\]\/85:hover {
   background-color: rgb(16 39 75 / 0.85);
-}
-
-.hover\:text-\[\#0A1931\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(10 25 49 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-white:hover {
