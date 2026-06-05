@@ -1065,12 +1065,52 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[url\] {
+  background-color: url;
+}
+
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
 }
 
 .bg-\[url\(\'\/assets\/images\/bgou\.jpg\'\)\] {
   background-image: url('/assets/images/bgou.jpg');
+}
+
+.bg-\[url\(\)\] {
+  background-image: url();
+}
+
+.bg-\[url\(\'\'\)\] {
+  background-image: url('');
+}
+
+.bg-\[url\(\'\.\/\'\)\] {
+  background-image: url('./');
+}
+
+.bg-\[url\(\'\.\/src\'\)\] {
+  background-image: url('./src');
+}
+
+.bg-\[url\(\'\.\/assets\'\)\] {
+  background-image: url('./assets');
+}
+
+.bg-\[url\(\'\.\/assets\/images\'\)\] {
+  background-image: url('./assets/images');
+}
+
+.bg-\[url\(\'\.\/assets\/images\/\'\)\] {
+  background-image: url('./assets/images/');
+}
+
+.bg-\[url\(\'\.\/assets\/images\/bgou\.jpg\'\)\] {
+  background-image: url('./assets/images/bgou.jpg');
 }
 
 .bg-cover {
