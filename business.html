@@ -3,149 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business</title>
+    <title>Shop</title>
     <link rel="stylesheet" href="src/output.css">
 </head>
 
-<body class="bg-[#B3CFE5] text-[#0A1931]">
+<body class="bg-[url('/assets/images/bgou.jpg')] bg-cover bg-center text-white">
 
   <!-- NAVBAR -->
+    <!-- Header and navbar start -->
     <header>
-        <nav class="w-[97%] h-[7vh] flex justify-between bg-[#0A1931] text-center items-center fixed backdrop-blur-sm bg-opacity-80 mt-10 ml-5 rounded-full z-10">
-            <div class="ml-24">
-                <a href="./index.html" class="flex text-white justify-center items-center gap-2">
-                    <img src="./Assets/images/logo bkv afro white.png" alt="" class="w-12 h-12">
-                    <p class="font-bold">Bukavu Positive</p>
-                </a>
-            </div>
-            <ul class="flex mr-20 gap-14 font-bold text-white">
-                <li class="cursor-pointer"><a href="./index.html">Accueil</a></li>
-                <li class="cursor-pointer"> <a href="./shop.html"> Shop </a></li>
-                <li class="cursor-pointer"> A propos</li>
-                <li class="cursor-pointer"> Donation</li>
-                <li class="cursor-pointer"> Contact</li>
+        <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] h-[70px] flex justify-between items-center bg-gray-700/50 backdrop-blur-sm rounded-full z-50 px-10 border border-gray-700">
+            <a href="./index.html" class="flex items-center gap-2 text-gray-500 hover:text-white">
+                <img src="./Assets/images/logo bkv afro white.png" class="w-12 h-12" />
+                <span class="font-bold hidden sm:block">Bana BK</span>
+            </a>
+            <ul class="hidden md:flex gap-10 font-bold text-gray-500 items-center">
+                <li><a href="./index.html" class="hover:text-white">Accueil</a></li>
+                <li><a href="./shop.html" class="hover:text-white">Shop</a></li>
+                <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
+                <li><a href="#" class="hover:text-white text-cyan-400">Cascadeurs</a></li>
+                <!-- <li class="relative">
+                    <img src="./Assets/images/cart-icon-gray.png" class="w-8 h-8" />
+                    <span class="absolute -top-2 -right-2 w-5 h-5 bg-white text-black text-xs rounded-full flex items-center justify-center">0</span>
+                </li> -->
             </ul>
         </nav>
     </header>
 
   <!-- PAGE HEADER -->
-<div class="h-[15vh]"></div>
-  <section class="px-6 py-10 text-center">
-    <h2 class="text-3xl font-bold">Annuaire des Entreprises</h2>
-    <p class="mt-2 text-gray-600">
-        Trouvez facilement un business près de chez vous
-    </p>
-  </section>
+    <div class="h-[15vh]"></div>
+    <section class="px-6 py-10 text-center">
+        <h2 class="text-3xl font-bold">Annuaire des entreprises et cascadeurs de la ville</h2>
+        <p class="mt-2 text-gray-500">
+            Un espace pour s'entre soutenir et qui soutienne <b class="text-cyan-400">BanaBK</b>
+        </p>
+    </section>
 
   <!-- FILTERS (UI ONLY) -->
   <section class="px-6 mb-6">
     <div class="flex text-center justify-center items-center mb-10">
-        <input type="search" name="search" id="" class="w-[40vw] h-12 rounded-l-xl p-3 pl-5 outline-none placeholder:'Search products'">
-        <button class="bg-[#0A1931] text-white rounded-r-xl p-3 font-semibold"> Rechercher</button>
+        <input type="search" name="search" id="" placeholder="rechercher une personne morale ou physique" class="w-[40vw] h-12 rounded-l-xl p-3 pl-5 outline-none placeholder:text-gray-400 placeholder:text-sm placeholder:italic">
+        <button class="bg-[#0A1931]/20 text-white rounded-r-xl p-3 font-semibold border-gray-500 border hover:bg-[#0A1931]/90"> Rechercher</button>
     </div>
-    <div class="flex flex-wrap gap-3 justify-center">
-      <button class="px-4 py-2 border border-[#0A1931] rounded-full text-sm hover:bg-accent hover:text-white">All</button>
-      <button class="px-4 py-2 border border-[#0A1931] rounded-full text-sm hover:bg-accent hover:text-white">T-Shirts</button>
-      <button class="px-4 py-2 border border-[#0A1931] rounded-full text-sm hover:bg-accent hover:text-white">Hoodies</button>
-      <button class="px-4 py-2 border border-[#0A1931] rounded-full text-sm hover:bg-accent hover:text-white">Caps</button>
+    <div class="flex flex-wrap gap-3 justify-center text-gray-500">
+      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white">Tout</button>
+      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white">T-Shirts</button>
+      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white">Hoodies</button>
+      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white">Chapeau</button>
     </div>
   </section>
 
-  <!-- PRODUCTS GRID COLLECTION HOODIE-->
-    <section class="px-6 pb-8">
-        <h2 class="text-center p-6"> Collection hoodie</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-40">
+  <!-- PRODUCTS GRID COLLECTION HOODIE -->
+    <section class="px-4 sm:px-6 pb-10">
+        <h2 class="text-center py-6 text-xl sm:text-2xl font-semibold">
+            Collection Hoodie
+        </h2>
 
-            <!-- PRODUCT CARD -->
-            <div class="border rounded-xl overflow-hidden hover:shadow-lg transition">
-                <a href="product.html">
-                    <img src="assets/images/person.jpg" alt="Bukavu Tee" class="w-full h-52 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-xl">Bukavu Spirit Tee</h3>
-                        <p class="text-sm text-gray-500">Premium Cotton</p>
-                        <div class="flex items-center justify-between mt-3">
-                            <span class="font-bold">$15</span>
-                            <span class="text-sm text-accent font-semibold">Voir Plus</span>
+        <!-- Container -->
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+
+                <!-- PRODUCT CARD -->
+                <div class="border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80">
+                    <a href="product.html">
+                        <img src="assets/images/person.jpg" alt="Bukavu Tee" class="w-full aspect-square object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-base sm:text-lg"> Bukavu Spirit Tee </h3>
+                            <p class="text-sm text-gray-500">Premium Cotton</p>
+                            <div class="flex items-center justify-between mt-3">
+                                <span class="font-bold">$15</span>
+                                <span class="text-sm text-accent font-semibold">Voir</span>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <!-- PRODUCT CARD -->
-            <div class="border rounded-xl overflow-hidden hover:shadow-lg transition">
-                <img src="assets/images/person.jpg" alt="Bukavu Hoodie" class="w-full h-52 object-cover">
-                <div class="p-4">
-                <h3 class="font-semibold">Bukavu Positive Hoodie</h3>
-                <p class="text-sm text-gray-500">Warm & Bold</p>
-                <div class="flex items-center justify-between mt-3">
-                    <span class="font-bold">$30</span>
-                    <a href="product.html" class="text-sm text-accent font-semibold">Voir Plus</a>
+                <!-- PRODUCT CARD -->
+                 <div class="border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80">
+                    <a href="product.html">
+                        <img src="assets/images/person.jpg" alt="Bukavu Tee" class="w-full aspect-square object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-base sm:text-lg"> Bukavu Spirit Tee </h3>
+                            <p class="text-sm text-gray-500">Premium Cotton</p>
+                            <div class="flex items-center justify-between mt-3">
+                                <span class="font-bold">$15</span>
+                                <span class="text-sm text-accent font-semibold">Voir</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
+                <!-- PRODUCT CARD -->
+                 <div class="border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80">
+                    <a href="product.html">
+                        <img src="assets/images/person.jpg" alt="Bukavu Tee" class="w-full aspect-square object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-base sm:text-lg"> Bukavu Spirit Tee </h3>
+                            <p class="text-sm text-gray-500">Premium Cotton</p>
+                            <div class="flex items-center justify-between mt-3">
+                                <span class="font-bold">$15</span>
+                                <span class="text-sm text-accent font-semibold">Voir</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </div>
+                <!-- PRODUCT CARD -->
+                 <div class="border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80">
+                    <a href="product.html">
+                        <img src="assets/images/person.jpg" alt="Bukavu Tee" class="w-full aspect-square object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-base sm:text-lg"> Bukavu Spirit Tee </h3>
+                            <p class="text-sm text-gray-500">Premium Cotton</p>
+                            <div class="flex items-center justify-between mt-3">
+                                <span class="font-bold">$15</span>
+                                <span class="text-sm text-accent font-semibold">Voir</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
-            <!-- PRODUCT CARD -->
-            <div class="border rounded-xl overflow-hidden hover:shadow-lg transition">
-                <img src="assets/images/person.jpg" alt="Bukavu Cap" class="w-full h-52 object-cover">
-                <div class="p-4">
-                    <h3 class="font-semibold">Bukavu Pride Cap</h3>
-                    <p class="text-sm text-gray-500">Street Style</p>
-                    <div class="flex items-center justify-between mt-3">
-                        <span class="font-bold">$10</span>
-                        <a href="product.html" class="text-sm text-accent font-semibold">Voir Plus</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- DUPLICATE CARD FOR MORE PRODUCTS -->
-            <div class="border rounded-xl overflow-hidden hover:shadow-lg transition">
-                <img src="assets/images/person.jpg" alt="Bukavu Tee" class="w-full h-52 object-cover">
-                <div class="p-4">
-                    <h3 class="font-semibold">Bukavu Classic Tee</h3>
-                    <p class="text-sm text-gray-500">Minimal Design</p>
-                    <div class="flex items-center justify-between mt-3">
-                        <span class="font-bold">$15</span>
-                        <a href="product.html" class="text-sm text-accent font-semibold">Voir</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
-    <!-- End section collection hoodie -->
+<!-- End section collection hoodie -->
+
+    <!-- Start section businesses -->
+    <section>
+        <div class="bg-[#0A1931] text-white px-6 py-10">
+            <div class="max-w-6xl mx-auto flex flex-col sm:flex-row gap-6 sm:gap-10 text-center sm:text-left justify-center items-center">
+                <p class="cursor-pointer text-sm sm:text-base">Cliquez ici pour découvrir les entreprises qui supportent <b class="text-cyan-400">BanaBK</b> </p>
+                <a href="./business.html"><img src="./Assets/images/rightarrow.png" alt="right arrow" class="w-10 h-10 sm:w-12 sm:h-12 animate-pulse hover:animate-none cursor-pointer"></a>
+            </div>
+        </div>
+    </section>
 
      <!-- FOOTER -->
-    <footer class="mt-20"> 
-        <div class="flex gap-10 ml-40">
-            <div>
-                <a href="./index.html" class="flex items-center gap-2">
-                    <img src="./Assets/images/logo bkv afro navy.png" alt="" class="w-20 h-20">
-                    <p class="font-bold text-3xl">Bukavu Positive</p>
-                </a>
-                <p> BKV+, La marque qui célèbre Bukavu, son énergie, sa culture et son futur.</p>
-            </div>
-            <div>
-                <div>
-                    <h3> Quick link</h3>
-                    <ul class="flex gap-5 font-semibold mt-2">
-                        <li class="cursor-pointer hover:text-white"> <a href="#"> Acceuil </a></li>
-                        <li class="cursor-pointer hover:text-white"> <a href="./shop.html"> Shop </a></li>
-                        <li class="cursor-pointer hover:text-white"> <a href="./contact.html"> Contact </a></li>
-                        <li class="cursor-pointer hover:text-white"> <a href="./panier.html"> Panier </a></li>
-                        <li class="cursor-pointer hover:text-white"> <a href="./business.html"> Entrepreneurs </a></li>
-                    </ul>
+    <footer class="mt-10">
+    <!-- Main container -->
+        <div class="max-w-7xl mx-auto px-6 border-t border-gray-700">
+            
+            <!-- Top content -->
+            <div class="flex flex-col md:flex-row gap-10 md:gap-20 items-start md:items-center py-10">
+                
+                <!-- Brand -->
+                <div class="md:w-1/2">
+                    <a href="./index.html" class="flex items-center gap-3">
+                        <img src="./Assets/images/logo bkv afro white.png" alt="Bukavu Positive Logo" class="w-16 h-16">
+                        <p class="font-bold text-2xl">BanaBK</p>
+                    </a>
+                    <p class="mt-3 text-base leading-relaxed">
+                        <b class="text-cyan-400">BanaBK</b>, La marque qui célèbre Bukavu, son énergie, sa culture et son futur.
+                    </p>
                 </div>
-                <div class="mt-5">
-                    <h3>Social media</h3>
-                    <div class="flex gap-5 mt-2">
-                        <a href="instagram.com"> <img src="./Assets/images/instagram.png" alt="logo instagram" class="w-10 h-10"></a>
-                        <a href="instagram.com"> <img src="./Assets/images/facebook.png" alt="logo facebook" class="w-10 h-10"></a>
-                        <a href="instagram.com"> <img src="./Assets/images/tiktok-logo.png" alt="logo tiktok" class="w-10 h-10"></a>
+
+                <!-- Links & Social -->
+                <div class="md:w-1/2 flex flex-col sm:flex-row gap-10">
+                    
+                    <!-- Quick links -->
+                    <div>
+                        <h3 class="font-bold text-gray-500 mb-3">Quick links</h3>
+                        <ul class="flex flex-col gap-2 text-sm text-gray-500">
+                            <li><a href="./index.html" class="hover:text-white">Accueil</a></li>
+                            <li><a href="#" class="hover:text-white">Shop</a></li>
+                            <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
+                            <li><a href="./business.html" class="hover:text-white text-cyan-400">Cascadeurs</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Social media -->
+                    <div>
+                        <h3 class="font-bold text-gray-500 mb-3">Social media</h3>
+                        <div class="flex gap-4">
+                            <a href="#"><img src="./Assets/images/instagram.png" alt="Instagram" class="w-8 h-8"></a>
+                            <a href="#"><img src="./Assets/images/facebook.png" alt="Facebook" class="w-8 h-8"> </a>
+                            <a href="#"><img src="./Assets/images/tiktok-logo.png" alt="TikTok" class="w-8 h-8"></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="text-center py-12 text-sm text-gray-500">
-            <p> © 2025 dixer-Group . All right reserved.</p>
+
+            <!-- Bottom -->
+            <div class="border-t border-gray-700 py-6 text-center text-sm text-gray-500">
+                <p>&copy 2025 Barhemula-Group. All rights reserved. Developped by <b><a href="https://www.instagram.com/el_dixer/">El Dixer</a></b></p>
+            </div>
+
         </div>
     </footer>
 
