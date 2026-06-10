@@ -28,11 +28,11 @@
     </header>
     <!--  end header and navbar -->
 
-    <section class="pt-36 min-h-screen">
-        <div class="px-28 gap-16 flex flex-wrap md:px-6">
-            <div class="max-w-2xl">
+    <section class="pt-36 min-h-screen px-8">
+        <div class="flex flex-wrap gap-8 md:px-6">
+            <div class="max-w-2xl mx-auto">
                 <img src="./Assets/images/afriq.jpg" alt="" class="aspect-square object-cover w-full">
-                <div class="grid grid-cols-5 gap-3 flex-wrap mt-3">
+                <div class="grid grid-cols-5 md:grid-cols-4 lg:grid-cols-6 gap-3 flex-wrap mt-3">
                     <img src="./Assets/images/afriq.jpg" alt="" class="w-full aspect-square object-cover">
                     <img src="./Assets/images/afriq.jpg" alt="" class="w-full aspect-square object-cover">
                     <img src="./Assets/images/afriq.jpg" alt="" class="w-full aspect-square object-cover">
@@ -42,7 +42,7 @@
                     <img src="./Assets/images/afriq.jpg" alt="" class="w-full aspect-square object-cover">
                 </div>
             </div>
-            <div class="max-w-3xl">
+            <div class="max-w-3xl mx-auto">
                 <h1 class="font-bold text-2xl"> HOODIE COLLECTION </h1>
                 <h2> Homme</h2>
                 <h3 class="font-semibold text-2xl mt-3">15$</h3>
@@ -162,36 +162,56 @@
             </div>
         </div>
      </section>
-    <footer class="mt-20"> 
-        <div class="flex gap-10 ml-40">
-            <div>
-                <h3>Logo BKV+</h3>
-                <p> BKV+, La marque qui célèbre Bukavu, son énergie, sa culture et son futur.</p>
-            </div>
-            <div>
-                <div>
-                    <h3> Quick link</h3>
-                    <ul class="flex gap-5 font-semibold mt-5">
-                        <li class="cursor-pointer"> Accueil</li>
-                        <li class="cursor-pointer"> Shop</li>
-                        <li class="cursor-pointer"> A propos</li>
-                        <li class="cursor-pointer"> Donation</li>
-                        <li class="cursor-pointer"> Contact</li>
-                    </ul>
+    <footer class="mt-10">
+    <!-- Main container -->
+        <div class="max-w-7xl mx-auto px-6 border-t border-gray-700">
+            
+            <!-- Top content -->
+            <div class="flex flex-col md:flex-row gap-10 md:gap-20 items-start md:items-center py-10">
+                
+                <!-- Brand -->
+                <div class="md:w-1/2">
+                    <a href="./index.html" class="flex items-center gap-3">
+                        <img src="./Assets/images/logo bkv afro white.png" alt="Bukavu Positive Logo" class="w-16 h-16">
+                        <p class="font-bold text-2xl">BanaBK</p>
+                    </a>
+                    <p class="mt-3 text-base leading-relaxed">
+                        BanaBK, La marque qui célèbre Bukavu, son énergie, sa culture et son futur.
+                    </p>
                 </div>
-                <div>
-                    <h3>Social media</h3>
-                    <div class="flex gap-5 mt-5">
-                        <a href="instagram.com"> <img src="" alt=""></a>
-                        <a href="instagram.com"> Instagram</a>
-                        <a href="instagram.com"> Instagram</a>
-                        <a href="instagram.com"> Instagram</a>
+
+                <!-- Links & Social -->
+                <div class="md:w-1/2 flex flex-col sm:flex-row gap-10">
+                    
+                    <!-- Quick links -->
+                    <div>
+                        <h3 class="font-bold text-gray-500 mb-3">Quick links</h3>
+                        <ul class="flex flex-col gap-2 text-sm text-gray-500">
+                            <li><a href="#" class="hover:text-white">Accueil</a></li>
+                            <li><a href="./shop.html" class="hover:text-white">Shop</a></li>
+                            <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
+                            <li><a href="./panier.html" class="hover:text-white">Panier</a></li>
+                            <li><a href="./business.html" class="hover:text-white">Donation</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Social media -->
+                    <div>
+                        <h3 class="font-bold text-gray-500 mb-3">Social media</h3>
+                        <div class="flex gap-4">
+                            <a href="#"><img src="./Assets/images/instagram.png" alt="Instagram" class="w-8 h-8"></a>
+                            <a href="#"><img src="./Assets/images/facebook.png" alt="Facebook" class="w-8 h-8"> </a>
+                            <a href="#"><img src="./Assets/images/tiktok-logo.png" alt="TikTok" class="w-8 h-8"></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="text-center py-12 text-sm text-gray-500">
-            <p> &copy 2025 dixer-Group . All right reserved.</p>
+
+            <!-- Bottom -->
+            <div class="border-t border-gray-700 py-6 text-center text-sm text-gray-500">
+                <p>&copy 2025 Barhemula-Group. All rights reserved. Developped by <b><a href="https://www.instagram.com/el_dixer/">El Dixer</a></b></p>
+            </div>
+
         </div>
     </footer>
 </body>
