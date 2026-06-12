@@ -989,6 +989,26 @@ video {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\'assets\/images\/bgou\.jpg\'\)\] {
+  background-image: url('assets/images/bgou.jpg');
+}
+
+.bg-\[url\(\'\.\/assets\/images\/bgou\.jpg\'\)\] {
+  background-image: url('./assets/images/bgou.jpg');
+}
+
+.bg-\[url\(\'\.\/ssets\/images\/bgou\.jpg\'\)\] {
+  background-image: url('./ssets/images/bgou.jpg');
+}
+
+.bg-\[url\(\'\.\/Assets\/images\/bgou\.jpg\'\)\] {
+  background-image: url('./Assets/images/bgou.jpg');
+}
+
+.bg-\[url\(\'\.\/Aassets\/images\/bgou\.jpg\'\)\] {
+  background-image: url('./Aassets/images/bgou.jpg');
+}
+
 .from-\[\#10274b\]\/20 {
   --tw-gradient-from: rgb(16 39 75 / 0.2) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(16 39 75 / 0) var(--tw-gradient-to-position);
