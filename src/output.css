@@ -616,6 +616,26 @@ video {
   top: 1.5rem;
 }
 
+.left-10 {
+  left: 2.5rem;
+}
+
+.left-2 {
+  left: 0.5rem;
+}
+
+.left-28 {
+  left: 7rem;
+}
+
+.left-24 {
+  left: 6rem;
+}
+
+.left-16 {
+  left: 4rem;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -1327,6 +1347,10 @@ video {
     display: block;
   }
 
+  .sm\:flex {
+    display: flex;
+  }
+
   .sm\:h-12 {
     height: 3rem;
   }
@@ -1474,6 +1498,10 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
