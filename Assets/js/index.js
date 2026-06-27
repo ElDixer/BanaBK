@@ -13,10 +13,18 @@ function closemenu() {
     cross.classList.add('hidden');
 }
 
-burger.addEventListener("click", () =>{
+burger.addEventListener("click", (e) =>{
+    e.stopPropagation();
     openmenu();
 })
 
-cross.addEventListener("click", () => {
+cross.addEventListener("click", (e) => {
+    e.stopPropagation();
     closemenu();
+})
+
+document.addEventListener("click", () =>{
+    if (!menu.classList.contains('hidden')) {
+          closemenu();
+    }
 })
