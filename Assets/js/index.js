@@ -5,6 +5,7 @@ const cross = document.querySelector('#crossmenu');
 function openmenu() {
     menu.classList.remove('hidden');
     burger.classList.add('hidden');
+    menu.classList.add('block')
     cross.classList.remove('hidden');
 }
 function closemenu() {
