@@ -994,6 +994,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1008,6 +1013,14 @@ video {
 
 .bg-\[radial-gradient\(circle_at_top_left\2c rgba\(34\2c 211\2c 238\2c 0\.12\)\2c transparent_35\%\)\2c radial-gradient\(circle_at_top_right\2c rgba\(34\2c 211\2c 238\2c 0\.08\)\2c transparent_30\%\)\] {
   background-image: radial-gradient(circle at top left,rgba(34,211,238,0.12),transparent 35%),radial-gradient(circle at top right,rgba(34,211,238,0.08),transparent 30%);
+}
+
+.bg-\[radial-gradient\(circle_at_top_left\2c rgba\(34\2c 211\2c 238\2c 0\.12\)\2c transparent_\%\)\2c radial-gradient\(circle_at_top_right\2c rgba\(34\2c 211\2c 238\2c 0\.08\)\2c transparent_30\%\)\] {
+  background-image: radial-gradient(circle at top left,rgba(34,211,238,0.12),transparent %),radial-gradient(circle at top right,rgba(34,211,238,0.08),transparent 30%);
+}
+
+.bg-\[radial-gradient\(circle_at_top_left\2c rgba\(34\2c 211\2c 238\2c 0\.12\)\2c transparent_60\%\)\2c radial-gradient\(circle_at_top_right\2c rgba\(34\2c 211\2c 238\2c 0\.08\)\2c transparent_30\%\)\] {
+  background-image: radial-gradient(circle at top left,rgba(34,211,238,0.12),transparent 60%),radial-gradient(circle at top right,rgba(34,211,238,0.08),transparent 30%);
 }
 
 .from-\[\#10274b\]\/20 {
