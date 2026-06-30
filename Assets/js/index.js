@@ -23,6 +23,9 @@ cross.addEventListener("click", (e) => {
     e.stopPropagation();
     closemenu();
 })
+menu.addEventListener("click", (e) => {
+    e.stopPropagation();
+});
 
 document.addEventListener("click", () =>{
     if (!menu.classList.contains('hidden')) {
