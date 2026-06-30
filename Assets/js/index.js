@@ -1,6 +1,7 @@
 const burger = document.querySelector('#burgermenu');
 const menu = document.querySelector('#menulist');
 const cross = document.querySelector('#crossmenu');
+const activepage = window.location.pathname.split("/").pop() || "index.html";
 
 function openmenu() {
     menu.classList.remove('hidden');
@@ -30,5 +31,13 @@ menu.addEventListener("click", (e) => {
 document.addEventListener("click", () =>{
     if (!menu.classList.contains('hidden')) {
           closemenu();
+    }
+})
+
+document.querySelectorAll(".navlink").forEach(link => {
+    const linkpage = link.getAttribute("href").split("/").pop();
+
+    if (linkpage === activepage) {
+        link.classList.add("bg-red-500");
     }
 })
