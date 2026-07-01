@@ -2,6 +2,9 @@ const burger = document.querySelector('#burgermenu');
 const menu = document.querySelector('#menulist');
 const cross = document.querySelector('#crossmenu');
 const activepage = window.location.pathname.split("/").pop() || "index.html";
+const mainimage = document.getElementById("mainimage");
+const imagecarousel = document.querySelectorAll(".carousel");
+let currentindex = 0;
 
 function openmenu() {
     menu.classList.remove('hidden');
@@ -34,7 +37,6 @@ document.addEventListener("click", () =>{
     }
 })
 
-
 document.querySelectorAll(".navlink").forEach(link => {
     const href = link.getAttribute("href");
     
@@ -47,3 +49,18 @@ document.querySelectorAll(".navlink").forEach(link => {
         }
     }
 })
+
+imagecarousel.forEach(carousel => {
+    carousel.addEventListener("click", () => {
+        mainimage.src = carousel.src;
+    })
+})
+
+setInterval(() => {
+    currentindex++;
+    if (currentindex >= imagecarousel.length) {
+        currentindex = 0;
+    }
+    mainimage.src = imagecarousel[currentindex].src;
+}, 2000);
+
