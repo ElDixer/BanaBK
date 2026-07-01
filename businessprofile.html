@@ -11,22 +11,35 @@
 
   <!-- NAVBAR -->
     <!-- Header and navbar start -->
-    <header>
-        <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] h-[70px] flex justify-between items-center bg-gray-700/50 backdrop-blur-sm rounded-full z-50 px-10 border border-gray-700">
+    <header class="flex items-center justify-center">
+        <nav class="fixed top-6 w-[95%] h-[70px] flex justify-between items-center bg-gray-700/50 backdrop-blur-sm rounded-full z-50 px-10 border border-gray-700 relatve">
             <a href="./index.html" class="flex items-center gap-2 text-gray-500 hover:text-white">
                 <img src="./Assets/images/logo bkv afro white.png" class="w-12 h-12" />
-                <span class="font-bold hidden sm:block">Bana-BK</span>
+                <span class="font-bold hidden sm:block">Batotot ya BK</span>
             </a>
+            <div class="md:hidden cursor-pointer" id="burgermenu">
+                <img src="./Assets/images/menuicon.png" alt="" class="w-8 h-8">
+            </div>
+            <div class="hidden cursor-pointer" id="crossmenu">
+                <img src="./Assets/images/cross.png" alt="" class="w-8 h-8">
+            </div>
             <ul class="hidden md:flex gap-10 font-bold text-gray-500 items-center">
                 <li><a href="./index.html" class="hover:text-white">Accueil</a></li>
                 <li><a href="./shop.html" class="hover:text-white">Shop</a></li>
-                <li><a href="#" class="hover:text-white">Galery</a></li>
+                <li><a href="./gallery.html" class="hover:text-white">Gallery</a></li>
                 <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
-                <li><a href="#" class="hover:text-white text-cyan-400">Cascadeurs</a></li>
+                <li><a href="./business.html" class="hover:text-white">Cascadeurs</a></li>
                 <!-- <li class="relative">
                     <img src="./Assets/images/cart-icon-gray.png" class="w-8 h-8" />
                     <span class="absolute -top-2 -right-2 w-5 h-5 bg-white text-black text-xs rounded-full flex items-center justify-center">0</span>
                 </li> -->
+            </ul>
+            <ul class="hidden w-1/3 font-bold text-slate-900 items-center absolute top-16 p-4 right-10 text-center bg-white rounded-md transition" id="menulist">
+                <li class="w-full h-10 flex items-center"><a href="./index.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Accueil</a></li>
+                <li class="w-full h-10 flex items-cente"><a href="./shop.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Shop</a></li>
+                <li class="w-full h-10 flex items-center"><a href="./gallery.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Gallery</a></li>
+                <li class="w-full h-10 flex items-center"><a href="./contact.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Contact</a></li>
+                <li class="w-full h-10 flex items-center"><a href="./business.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Cascadeurs</a></li>
             </ul>
         </nav>
     </header>

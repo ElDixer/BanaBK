@@ -6,7 +6,7 @@ const activepage = window.location.pathname.split("/").pop() || "index.html";
 function openmenu() {
     menu.classList.remove('hidden');
     burger.classList.add('hidden');
-    menu.classList.add('block')
+    // menu.classList.add('block');
     cross.classList.remove('hidden');
 }
 function closemenu() {
@@ -34,10 +34,16 @@ document.addEventListener("click", () =>{
     }
 })
 
-document.querySelectorAll(".navlink").forEach(link => {
-    const linkpage = link.getAttribute("href").split("/").pop();
 
-    if (linkpage === activepage) {
-        link.classList.add("bg-red-500");
+document.querySelectorAll(".navlink").forEach(link => {
+    const href = link.getAttribute("href");
+    
+    if (href) {
+        const linkpage = href.split("/").pop();
+
+        if (linkpage === activepage) {
+            link.classList.remove("bg-white");
+            link.classList.add("bg-cyan-500");
+        }
     }
 })
