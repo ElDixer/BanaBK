@@ -5,6 +5,9 @@ const activepage = window.location.pathname.split("/").pop() || "index.html";
 const mainimage = document.getElementById("mainimage");
 const imagecarousel = document.querySelectorAll(".carousel");
 let currentindex = 0;
+const input = document.getElementById("input");
+const moins = document.getElementById("moins");
+const plus = document.getElementById("plus");
 
 function openmenu() {
     menu.classList.remove('hidden');
@@ -64,3 +67,14 @@ setInterval(() => {
     mainimage.src = imagecarousel[currentindex].src;
 }, 2000);
 
+plus.addEventListener("click", () =>{
+    input.value = Number(input.value) + 1;
+})
+
+moins.addEventListener("click", () =>{
+    if (Number(input.value) > 1) {
+        input.value = Number(input.value) - 1;
+    } else {
+        input.value = 0;
+    }
+})
