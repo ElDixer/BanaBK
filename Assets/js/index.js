@@ -8,6 +8,8 @@ let currentindex = 0;
 const input = document.getElementById("input");
 const moins = document.getElementById("moins");
 const plus = document.getElementById("plus");
+const payerBtn = document.getElementById("payerBtn");
+
 
 function openmenu() {
     menu.classList.remove('hidden');
@@ -78,3 +80,33 @@ moins.addEventListener("click", () =>{
         input.value = 0;
     }
 })
+
+payerBtn.addEventListener("click", () => {
+
+    const produit = "HOODIE COLLECTION";
+    const prix = 15;
+
+    const quantite = document.getElementById("input").value || 1;
+
+    const taille = document.querySelectorAll(".size").forEach(size => {
+        size.addEventListener("click", () => {
+            taille = size.innerText;
+        });
+    });
+
+    const numeroWhatsApp = "243904550059"; // Remplace par ton numéro avec indicatif pays
+
+    const message = `Bonjour, je souhaite acheter :
+
+    
+Produit : ${produit}
+Prix : ${prix}$
+Quantité : ${quantite}
+Taille : ${taille}
+
+Merci.`;
+
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+});
