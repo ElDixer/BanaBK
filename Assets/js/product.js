@@ -4,7 +4,7 @@ const input = document.getElementById("input");
 const moins = document.getElementById("moins");
 const plus = document.getElementById("plus");
 const payerBtn = document.getElementById("payerBtn");
-let currentindex = 0;
+
 
 imagecarousel.forEach(carousel => {
     carousel.addEventListener("click", () => {
