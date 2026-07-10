@@ -1,8 +1,3 @@
-document.getElementById("productImage").src = product.image;
-document.getElementById("productName").textContent = product.name;
-document.getElementById("productPrice").textContent = product.price;
-
-
 
 const search = document.getElementById("searchInput");
 
