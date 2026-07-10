@@ -706,6 +706,10 @@ video {
   margin-top: 10rem;
 }
 
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .flex {
   display: flex;
 }

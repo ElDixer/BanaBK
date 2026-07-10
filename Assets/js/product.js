@@ -38,14 +38,17 @@ const product = products.find(item => item.id === id);
 
 if (!product) {
     window.location.href = "shop.html";
-    return;
-}
+} else {
 
     mainimage.src = product.images[0];
     document.getElementById("productName").textContent = product.name;
     document.getElementById("productPrice").textContent = product.price;
     document.getElementById("productCategory").textContent = product.category;
     document.getElementById("productDescription").textContent = product.description;
+
+    // gallery code
+    // whatsapp code
+}
 
 payerBtn.addEventListener("click", () => {
 
