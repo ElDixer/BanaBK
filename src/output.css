@@ -988,56 +988,8 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[url\] {
-  background-color: url;
-}
-
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\)\] {
-  background-image: url();
-}
-
-.bg-\[url\(\'\.\/\'\)\] {
-  background-image: url('./');
-}
-
-.bg-\[url\(\'\.\/Assets\'\)\] {
-  background-image: url('./Assets');
-}
-
-.bg-\[url\(\'\.\/Assets\/\'\)\] {
-  background-image: url('./Assets/');
-}
-
-.bg-\[url\(\'\.\/Assets\/images\'\)\] {
-  background-image: url('./Assets/images');
-}
-
-.bg-\[url\(\'\.\/Assets\/images\/\'\)\] {
-  background-image: url('./Assets/images/');
-}
-
-.bg-\[url\(\'\.\/Assets\/images\/ba\'\)\] {
-  background-image: url('./Assets/images/ba');
-}
-
-.bg-\[url\(\'\.\/Assets\/images\/background\'\)\] {
-  background-image: url('./Assets/images/background');
-}
-
-.bg-\[url\(\'\.\/Assets\/images\/background\.\'\)\] {
-  background-image: url('./Assets/images/background.');
-}
-
-.bg-\[url\(\'\.\/Assets\/images\/background\.jpg\'\)\] {
-  background-image: url('./Assets/images/background.jpg');
-}
-
-.bg-\[url\(\'\.\/Assets\/images\/newbg\.jpg\'\)\] {
-  background-image: url('./Assets/images/newbg.jpg');
 }
 
 .from-\[\#10274b\]\/20 {
