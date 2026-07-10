@@ -1,27 +1,13 @@
 const mainimage = document.getElementById("mainimage");
-const imagecarousel = document.querySelectorAll(".carousel");
-const input = document.getElementById("input");
-const moins = document.getElementById("moins");
-const plus = document.getElementById("plus");
+const input = document.getElementById("quantityInput");
+const moins = document.getElementById("decreaseQty");
+const plus = document.getElementById("increaseQty");
 const payerBtn = document.getElementById("payerBtn");
+
 const params = new URLSearchParams(window.location.search);
 const id = Number(params.get("id"));
 
 
-
-imagecarousel.forEach(carousel => {
-    carousel.addEventListener("click", () => {
-        mainimage.src = carousel.src;
-    })
-})
-
-setInterval(() => {
-    currentindex++;
-    if (currentindex >= imagecarousel.length) {
-        currentindex = 0;
-    }
-    mainimage.src = imagecarousel[currentindex].src;
-}, 2000);
 
 plus.addEventListener("click", () =>{
     input.value = Number(input.value) + 1;
@@ -31,22 +17,42 @@ moins.addEventListener("click", () =>{
     if (Number(input.value) > 1) {
         input.value = Number(input.value) - 1;
     } else {
-        input.value = 0;
+        input.value = 1;
     }
 })
 
+let taille = "";
+
+document.querySelectorAll(".size-btn").forEach(btn => {
+
+    btn.addEventListener("click", () => {
+        taille = btn.textContent;
+    });
+
+});
+
+
+
+
+const product = products.find(item => item.id === id);
+
+if (!product) {
+    window.location.href = "shop.html";
+    return;
+}
+
+    mainimage.src = product.images[0];
+    document.getElementById("productName").textContent = product.name;
+    document.getElementById("productPrice").textContent = product.price;
+    document.getElementById("productCategory").textContent = product.category;
+    document.getElementById("productDescription").textContent = product.description;
+
 payerBtn.addEventListener("click", () => {
 
-    const produit = "HOODIE COLLECTION";
-    const prix = 15;
+    const produit = product.name;
+    const prix = product.price;
 
-    const quantite = document.getElementById("input").value || 1;
-
-    let taille = document.querySelectorAll(".size").forEach(size => {
-        size.addEventListener("click", () => {
-            taille = size.innerText;
-        }); 
-    });
+    const quantite = input.value;
 
     const numeroWhatsApp = "243904550059";
 
@@ -54,7 +60,7 @@ payerBtn.addEventListener("click", () => {
 
     
 Produit : ${produit}
-Prix : ${prix}$
+Prix : ${prix}
 Quantité : ${quantite}
 Taille : ${taille}
 
@@ -65,95 +71,17 @@ Merci.`;
     window.open(url, "_blank");
 });
 
-const products = [
-    {
-        id: 1,
-        name: "BatotoYaBk Tshirt Noir",
-        price: "$15",
-        material: "Premium Cotton",
-        image: "./Assets/images/batoto ya bk black.png",
-        category: "hoodie"
-    },
+const gallery = document.getElementById("gallery");
 
-    {
-        id: 2,
-        name: "BatotoYaBk tshirt Navy",
-        price: "$15",
-        material: "Premium Cotton",
-        image: "./Assets/images/batoto ya bk color.png",
-        category: "tshirt"
-    },
+product.images.forEach(image => {
+    const img = document.createElement("img");
 
-    {
-        id: 3,
-        name: "BatotoYaBk tshirt rouge",
-        price: "$15",
-        material: "Premium Cotton",
-        image: "./Assets/images/batoto ya bk red.png",
-        category: "tshirt"
-    },
+    img.src = image;
+    img.className = "thumbnail w-full aspect-square object-cover cursor-pointer";
 
-    {
-        id: 4,
-        name: "BatotoYaBk tshirt blanc",
-        price: "$15",
-        material: "Premium Cotton",
-        image: "./Assets/images/batoto ya bk white.png",
-        category: "Tshirt"
-    }
-];
-
-const product = products.find(item => item.id === id);
-
-document.getElementById("productImage").src = product.image;
-document.getElementById("productName").textContent = product.name;
-document.getElementById("productPrice").textContent = product.price;
-
-
-
-const search = document.getElementById("searchInput");
-
-search.addEventListener("input", function () {
-
-    const keyword = this.value.toLowerCase();
-
-    document.querySelectorAll(".product-card").forEach(card => {
-
-        const title = card.querySelector("h3").textContent.toLowerCase();
-
-        if (title.includes(keyword)) {
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
-
+    img.addEventListener("click", () => {
+        mainimage.src = image;
     });
 
-});
-
-
-
-const buttons = document.querySelectorAll("[data-category]");
-
-buttons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        const category = button.dataset.category;
-
-        document.querySelectorAll(".product-card").forEach(card => {
-
-            if (
-                category === "all" ||
-                card.dataset.category === category
-            ) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-
-        });
-
-    });
-
+    gallery.appendChild(img);
 });

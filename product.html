@@ -46,15 +46,20 @@
     <section class="pt-36 min-h-screen px-8">
         <div class="flex flex-wrap gap-8 md:px-6">
             <div class="max-w-2xl mx-auto">
-                <img src="./Assets/images/afriq.jpg" alt="" class="aspect-square object-cover w-full" id="mainimage">
-                <div class="grid grid-cols-5 md:grid-cols-4 lg:grid-cols-6 gap-3 flex-wrap mt-3">
-                    <img src="./Assets/images/afriq.jpg" alt="" class="w-full aspect-square object-cover carousel">
-                    <img src="./Assets/images/afriq.jpg" alt="" class="w-full aspect-square object-cover carousel">
-                    <img src="./Assets/images/bgfire.jpg" alt="" class="w-full aspect-square object-cover carousel">
-                    <img src="./Assets/images/afriq.jpg" alt="" class="w-full aspect-square object-cover carousel">
-                    <img src="./Assets/images/robothands.jpg" alt="" class="w-full aspect-square object-cover carousel">
-                    <img src="./Assets/images/bgouu.jpg" alt="" class="w-full aspect-square object-cover carousel">
-                    <img src="./Assets/images/afriq.jpg" alt="" class="w-full aspect-square object-cover carousel">
+                <img src="./Assets/images/afriq.jpg"
+                    alt="Product image"
+                    id="mainimage"
+                    class="aspect-square object-cover w-full">
+                <div
+                    id="gallery"
+                    class="grid grid-cols-5 md:grid-cols-4 lg:grid-cols-6 gap-3 mt-3">
+                    <!-- <img src="./Assets/images/afriq.jpg" alt="" class="w-full aspect-square object-cover thumbnail">
+                    <img src="./Assets/images/afriq.jpg" alt="" class="w-full aspect-square object-cover thumbnail">
+                    <img src="./Assets/images/bgfire.jpg" alt="" class="w-full aspect-square object-cover thumbnail">
+                    <img src="./Assets/images/afriq.jpg" alt="" class="w-full aspect-square object-cover thumbnail">
+                    <img src="./Assets/images/robothands.jpg" alt="" class="w-full aspect-square object-cover thumbnail">
+                    <img src="./Assets/images/bgouu.jpg" alt="" class="w-full aspect-square object-cover thumbnail">
+                    <img src="./Assets/images/afriq.jpg" alt="" class="w-full aspect-square object-cover thumbnail"> -->
                 </div>
             </div>
             <div class="max-w-3xl mx-auto">
@@ -71,22 +76,26 @@
                 <div>
                     <p class="font-semibold mt-5 mb-3"> Size</p>
                     <div class=" flex gap-4">
-                        <div class="size p-3 border hover:bg-[#10274b]/85 cursor-pointer">S</div>
-                        <div class="size p-3 border hover:bg-[#10274b]/85 cursor-pointer">M</div>
-                        <div class="size p-3 border hover:bg-[#10274b]/85 cursor-pointer">L</div>
-                        <div class="size p-3 border hover:bg-[#10274b]/85 cursor-pointer">XL</div>
-                        <div class="size p-3 border hover:bg-[#10274b]/85 cursor-pointer">XXL</div>
+                        <button class="size-btn p-3 border hover:bg-[#10274b]/85 cursor-pointer">S</button>
+                        <button class="size-btn p-3 border hover:bg-[#10274b]/85 cursor-pointer">M</button>
+                        <button class="size-btn p-3 border hover:bg-[#10274b]/85 cursor-pointer">L</button>
+                        <button class="size-btn p-3 border hover:bg-[#10274b]/85 cursor-pointer">XL</button>
+                        <button class="size-btn p-3 border hover:bg-[#10274b]/85 cursor-pointer">XXL</button>
                     </div>
                 </div>
                 <div>
                     <form class="mt-5">
-                        <label for="quantity-input" class="text-sm font-medium">Quantité:</label>
+                        <label for="quantityInput" class="text-sm font-medium">Quantité:</label>
                         <div class="flex items-center max-w-[9rem] shadow-xs rounded-md mt-3">
-                            <button type="button" id="moins" class="border focus:ring-4 font-medium text-sm px-3 focus:outline-none h-10">
+                            <button type="button" id="decreaseQty" class="border focus:ring-4 font-medium text-sm px-3 focus:outline-none h-10">
                                  -
                             </button>
-                            <input type="text" id="input" class="border-x-0 h-10 text-center text-black w-full py-2.5" placeholder="0" required />
-                            <button type="button" id="plus" class="border focus:ring-4 font-medium text-sm px-3 focus:outline-none h-10">
+                            <input
+                                type="number"
+                                min="1"
+                                value="1"
+                                id="quantityInput" class="border-x-0 h-10 text-center text-black w-full py-2.5" placeholder="0" required />
+                            <button type="button" id="increaseQty" class="border focus:ring-4 font-medium text-sm px-3 focus:outline-none h-10">
                                 +
                             </button>
                         </div>
@@ -229,6 +238,7 @@
         </div>
     </footer>
     <script src="./Assets/js/index.js"></script>
+    <script src="./Assets/js/products.js"></script>
     <script src="./Assets/js/product.js"></script>
 </body>
 </html>

@@ -60,20 +60,22 @@
             id="searchInput" 
             placeholder="Rechercher un produit..."
             class="w-[40vw] h-12 rounded-l-xl p-3 pl-5 outline-none">
-        <button class="bg-[#0A1931]/20 text-white rounded-r-xl p-3 font-semibold border-gray-500 border hover:bg-[#0A1931]/90"> Rechercher</button>
+        <button 
+        id="searchBtn"
+        class="bg-[#0A1931]/20 text-white rounded-r-xl p-3 font-semibold border-gray-500 border hover:bg-[#0A1931]/90"> Rechercher</button>
     </div>
     <div class="flex flex-wrap gap-3 justify-center text-gray-500">
-      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white">Tout</button>
-      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white">T-Shirts</button>
-      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white">Hoodies</button>
-      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white">Chapeau</button>
+      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="all">Tout</button>
+      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="tshirt">T-Shirts</button>
+      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="hoodie">Hoodies</button>
+      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="hat">Chapeau</button>
     </div>
   </section>
 
   <!-- PRODUCTS GRID COLLECTION HOODIE -->
     <section class="px-4 sm:px-6 pb-10">
         <h2 class="text-center py-6 text-xl sm:text-2xl font-semibold">
-            Collection Hoodie
+            Collection T-Shirts
         </h2>
 
         <!-- Container -->
@@ -83,11 +85,11 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
 
                 <!-- PRODUCT CARD -->
-                <div class="product-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt" >
+                <div class="group product-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt" >
                     <a href="product.html?id=1">
-                        <img src="./Assets/images/garcon redd.png" alt="Bukavu Tee" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                        <img src="./Assets/images/batoto ya bk black.png" alt="Bukavu Tee" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
                         <div class="p-4">
-                            <h3 class="font-semibold text-base sm:text-lg"> Bukavu Spirit Tee </h3>
+                            <h3 class="font-semibold text-base sm:text-lg"> Batoto ya Bk black </h3>
                             <p class="text-sm text-gray-500">Streetwear Collection</p>
                             <div class="flex items-center justify-between mt-3">
                                 <span class="font-bold">$15</span>
@@ -98,11 +100,11 @@
                 </div>
 
                 <!-- PRODUCT CARD -->
-                 <div class="border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
+                 <div class="group product-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
                     <a href="product.html?id=2">
-                        <img src="./Assets/images/garcon.png" alt="Bukavu Tee" class="w-full aspect-square object-cover">
+                        <img src="./Assets/images/batoto ya bk color.png" alt="Bukavu Tee" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
                         <div class="p-4">
-                            <h3 class="font-semibold text-base sm:text-lg"> Bukavu Spirit Tee </h3>
+                            <h3 class="font-semibold text-base sm:text-lg"> Batoto ya bk navy</h3>
                             <p class="text-sm text-gray-500">Streetwear Collection</p>
                             <div class="flex items-center justify-between mt-3">
                                 <span class="font-bold">$15</span>
@@ -112,11 +114,11 @@
                     </a>
                 </div>
                 <!-- PRODUCT CARD -->
-                 <div class="border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
+                 <div class="group product-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
                     <a href="product.html?id=3">
-                        <img src="./Assets/images/garcon bleu.png" alt="Bukavu Tee" class="w-full aspect-square object-cover">
+                        <img src="./Assets/images/batoto ya bk red.png" alt="Bukavu Tee" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
                         <div class="p-4">
-                            <h3 class="font-semibold text-base sm:text-lg"> Bukavu Spirit Tee </h3>
+                            <h3 class="font-semibold text-base sm:text-lg"> Batoto ya bk rouge </h3>
                             <p class="text-sm text-gray-500">Streetwear Collection</p>
                             <div class="flex items-center justify-between mt-3">
                                 <span class="font-bold">$15</span>
@@ -126,11 +128,11 @@
                     </a>
                 </div>
                 <!-- PRODUCT CARD -->
-                 <div class="border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
+                 <div class="group product-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
                     <a href="product.html?id=4">
-                        <img src="./Assets/images/garcon blackk.png" alt="Bukavu Tee" class="w-full aspect-square object-cover">
+                        <img src="./Assets/images/batoto ya bk white.png" alt="Bukavu Tee" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
                         <div class="p-4">
-                            <h3 class="font-semibold text-base sm:text-lg"> Bukavu Spirit Tee </h3>
+                            <h3 class="font-semibold text-base sm:text-lg"> Batoto ya bk blanc </h3>
                             <p class="text-sm text-gray-500">Streetwear Collection</p>
                             <div class="flex items-center justify-between mt-3">
                                 <span class="font-bold">$15</span>
@@ -209,5 +211,7 @@
     </footer>
 
     <script src="./Assets/js/index.js"></script>
+    <script src="./Assets/js/products.js"></script>
+    <script src="./Assets/js/shop.js"></script>
 </body>
 </html>
