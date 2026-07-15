@@ -1,7 +1,7 @@
 const burger = document.querySelector('#burgermenu');
 const menu = document.querySelector('#menulist');
 const cross = document.querySelector('#crossmenu');
-const join = document.getElementById("join")
+const joinBtn = document.getElementById("join")
 const activepage = window.location.pathname.split("/").pop() || "index.html";
 
 
@@ -53,8 +53,8 @@ document.querySelectorAll(".navlink").forEach(link => {
 
 
 joinBtn.addEventListener("click", () => {
-
-Merci.`;
+    const numeroWhatsApp = "243904550059";
+    const message = `Bonjour, je souhaite acheter :';
 
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(message)}`;
 
