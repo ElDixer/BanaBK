@@ -56,6 +56,8 @@ joinBtn.addEventListener("click", () => {
     const numeroWhatsApp = "243904550059";
     const message = `Bonjour, je souhaite acheter :';
 
+Merci.`;
+
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");
