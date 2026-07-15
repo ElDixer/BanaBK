@@ -49,14 +49,11 @@ document.querySelectorAll(".navlink").forEach(link => {
 })
 
 
-
-
-
 joinBtn.addEventListener("click", () => {
     const numeroWhatsApp = "243904550059";
-    const message = `Bonjour, je souhaite acheter :';
+    const message = `Bonjour, je souhaite rejoindre le mouvement!';
 
-Merci.`;
+Comment faire?`;
 
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(message)}`;
 
