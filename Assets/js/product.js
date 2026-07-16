@@ -88,3 +88,4 @@ product.images.forEach(image => {
 
     gallery.appendChild(img);
 });
+

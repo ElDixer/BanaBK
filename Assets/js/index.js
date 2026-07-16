@@ -51,7 +51,7 @@ document.querySelectorAll(".navlink").forEach(link => {
 
 joinBtn.addEventListener("click", () => {
     const numeroWhatsApp = "243904550059";
-    const message = `Bonjour, je souhaite rejoindre le mouvement!';
+    const message = `Bonjour, je souhaite rejoindre le mouvement!;
 
 Comment faire?`;
 
