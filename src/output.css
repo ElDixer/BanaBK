@@ -680,6 +680,30 @@ video {
   top: 75%;
 }
 
+.-top-20 {
+  top: -5rem;
+}
+
+.-bottom-10 {
+  bottom: -2.5rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.-bottom-40 {
+  bottom: -10rem;
+}
+
+.-bottom-36 {
+  bottom: -9rem;
+}
+
+.-bottom-32 {
+  bottom: -8rem;
+}
+
 .z-50 {
   z-index: 50;
 }
