@@ -913,6 +913,14 @@ video {
   width: 10rem;
 }
 
+.w-1 {
+  width: 0.25rem;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -943,6 +951,10 @@ video {
 
 .max-w-7 {
   max-width: 1.75rem;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .-translate-x-1 {
