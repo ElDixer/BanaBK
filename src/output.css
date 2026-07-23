@@ -641,16 +641,6 @@ video {
   margin-right: auto;
 }
 
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -755,6 +745,10 @@ video {
   height: 15rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .h-8 {
   height: 2rem;
 }
@@ -769,10 +763,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-7 {
-  height: 1.75rem;
 }
 
 .min-h-screen {
@@ -811,6 +801,10 @@ video {
   width: 1.25rem;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
 .w-8 {
   width: 2rem;
 }
@@ -825,10 +819,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-7 {
-  width: 1.75rem;
 }
 
 .max-w-2xl {
@@ -863,10 +853,6 @@ video {
   flex: 1 1 0%;
 }
 
-.flex-grow-0 {
-  flex-grow: 0;
-}
-
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -892,10 +878,6 @@ video {
 
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1044,6 +1026,11 @@ video {
   background-color: rgb(55 65 81 / 0.5);
 }
 
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
+}
+
 .bg-red-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
@@ -1059,9 +1046,19 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-red-400 {
+.bg-blue-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+}
+
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gradient-to-r {
@@ -1507,10 +1504,6 @@ video {
 
   .md\:w-1\/2 {
     width: 50%;
-  }
-
-  .md\:w-2\/3 {
-    width: 66.666667%;
   }
 
   .md\:grid-cols-3 {
