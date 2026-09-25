@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
+    <title>Donation</title>
     <link rel="stylesheet" href="src/output.css">
 </head>
 
@@ -15,7 +15,7 @@
         <nav class="fixed top-6 w-[95%] h-[70px] flex justify-between items-center bg-gray-700/50 backdrop-blur-sm rounded-full z-50 px-10 border border-gray-700 relatve">
             <a href="./index.html" class="flex items-center gap-2 text-gray-500 hover:text-white">
                 <img src="./Assets/images/logo bkv afro white.png" class="w-12 h-12" />
-                <span class="font-bold hidden sm:block">Batotot ya BK</span>
+                <span class="font-bold hidden sm:block">Batoto ya BK</span>
             </a>
             <div class="md:hidden cursor-pointer" id="burgermenu">
                 <img src="./Assets/images/menuicon.png" alt="" class="w-8 h-8">
@@ -29,10 +29,6 @@
                 <li><a href="./gallery.html" class="hover:text-white">Gallery</a></li>
                 <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
                 <li><a href="./business.html" class="hover:text-white">Cascadeurs</a></li>
-                <!-- <li class="relative">
-                    <img src="./Assets/images/cart-icon-gray.png" class="w-8 h-8" />
-                    <span class="absolute -top-2 -right-2 w-5 h-5 bg-white text-black text-xs rounded-full flex items-center justify-center">0</span>
-                </li> -->
             </ul>
             <ul class="hidden w-1/2 font-bold text-slate-900 items-center absolute top-16 p-4 right-10 text-center bg-white rounded-md transition" id="menulist">
                 <li class="w-full h-10 flex items-center"><a href="./index.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Accueil</a></li>
@@ -43,44 +39,44 @@
             </ul>
         </nav>
     </header>
-    
+
   <!-- introduction -->
     <section class="text-center mt-36 max-w-7xl mx-auto flex">
         <div class="max-w-3xl px-4">
             <h2 class="text-5xl font-bold text-left">Bienvenue,</h2>
             <p class="mt-10 text-gray-600 max-w-3xl text-justify">
-                BatotoyaBK funds est un espace de collecte de fonds dédiée au soutien des habitants de Bukavu et de leurs initiatives. 
-                Notre mission est d'offrir un moyen simple, sécurisé et transparent pour permettre à chacun de soutenir des causes qui 
+                BatotoyaBK funds est un espace de collecte de fonds dédiée au soutien des habitants de Bukavu et de leurs initiatives.
+                Notre mission est d'offrir un moyen simple, sécurisé et transparent pour permettre à chacun de soutenir des causes qui
                 ont un impact réel au sein de notre communauté. <br> <br>
 
-                Nous collaborons avec des porteurs de projets, des associations, des organisations locales et des initiatives citoyennes 
-                afin de mobiliser des ressources pour des besoins essentiels tels que l'éducation, la santé, l'aide d'urgence, 
+                Nous collaborons avec des porteurs de projets, des associations, des organisations locales et des initiatives citoyennes
+                afin de mobiliser des ressources pour des besoins essentiels tels que l'éducation, la santé, l'aide d'urgence,
                 l'entrepreneuriat, les projets communautaires et le développement local. <br> <br>
 
             </p>
         </div>
         <div class="flex-1 h-96 overflow-hidden"><img src="./Assets/images/helping.png" alt="" class="w-full aspect-square object-cover"></div>
-        
+
     </section>
     <!-- end section intro -->
 
       <!-- FILTERS (UI ONLY) -->
     <section class="px-6 mb-6 mt-10">
         <div class="flex flex-wrap gap-3 justify-center text-gray-500">
-            <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="all">Tout</button>
-            <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="tshirt">Education</button>
-            <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="hoodie">Medical</button>
-            <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="hat">Entreprise</button>
-            <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="hat">Autres</button>
+            <button class="filter-btn px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="all">Tout</button>
+            <button class="filter-btn px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="education">Education</button>
+            <button class="filter-btn px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="medical">Medical</button>
+            <button class="filter-btn px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="entreprise">Entreprise</button>
+            <button class="filter-btn px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="autres">Autres</button>
         </div>
     </section>
 
     <!-- End section filtre -->
 
-    <!-- PRODUCTS GRID COLLECTION HOODIE -->
+    <!-- CAUSES GRID -->
     <section class="px-4 sm:px-6 pb-10">
         <h2 class="text-center py-6 text-xl sm:text-2xl font-semibold">
-            Les causes qui compte les plus pour nous!
+            Les causes qui comptent le plus pour nous !
         </h2>
 
         <!-- Container -->
@@ -89,77 +85,75 @@
             <!-- Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
 
-                <!-- PRODUCT CARD -->
-                <div class="group product-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt" >
-                    <a href="product.html?id=1">
-                        <img src="./Assets/images/batoto ya bk black.png" alt="Bukavu Tee" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-base sm:text-lg"> Batoto ya Bk black</h3>
-                            <p class="text-sm text-gray-500">Streetwear Collection</p>
-                            <div class="flex items-center justify-between mt-3">
-                                <span class="font-bold">$15</span>
-                                <span class="text-sm text-accent font-semibold">Voir</span>
-                            </div>
-                        </div>
-                    </a>
+                <!-- CAUSE CARD -->
+                <div class="group cause-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="education">
+                    <img src="./Assets/images/education.png" alt="Éducation à Bukavu" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-base sm:text-lg">Éducation pour tous</h3>
+                        <p class="text-sm text-gray-400 mt-1">
+                            Fournitures scolaires, frais de scolarité et soutien pédagogique pour les enfants de Bukavu.
+                        </p>
+                        <a href="#" class="donate-btn mt-4 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-2 rounded-full transition">
+                            Faire un don
+                        </a>
+                    </div>
                 </div>
 
-                <!-- PRODUCT CARD -->
-                 <div class="group product-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
-                    <a href="product.html?id=2">
-                        <img src="./Assets/images/batoto ya bk color.png" alt="Bukavu Tee" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-base sm:text-lg"> Batoto ya bk navy</h3>
-                            <p class="text-sm text-gray-500">Streetwear Collection</p>
-                            <div class="flex items-center justify-between mt-3">
-                                <span class="font-bold">$15</span>
-                                <span class="text-sm text-accent font-semibold">Voir</span>
-                            </div>
-                        </div>
-                    </a>
+                <!-- CAUSE CARD -->
+                <div class="group cause-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="medical">
+                    <img src="./Assets/images/medical.png" alt="Aide médicale à Bukavu" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-base sm:text-lg">Aide médicale d'urgence</h3>
+                        <p class="text-sm text-gray-400 mt-1">
+                            Accès aux soins de santé de base et aide d'urgence pour les familles dans le besoin.
+                        </p>
+                        <a href="#" class="donate-btn mt-4 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-2 rounded-full transition">
+                            Faire un don
+                        </a>
+                    </div>
                 </div>
-                <!-- PRODUCT CARD -->
-                 <div class="group product-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
-                    <a href="product.html?id=3">
-                        <img src="./Assets/images/batoto ya bk red.png" alt="Bukavu Tee" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-base sm:text-lg"> Batoto ya bk rouge </h3>
-                            <p class="text-sm text-gray-500">Streetwear Collection</p>
-                            <div class="flex items-center justify-between mt-3">
-                                <span class="font-bold">$15</span>
-                                <span class="text-sm text-accent font-semibold">Voir</span>
-                            </div>
-                        </div>
-                    </a>
+
+                <!-- CAUSE CARD -->
+                <div class="group cause-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="entreprise">
+                    <img src="./Assets/images/entrepreneuriat.png" alt="Entrepreneuriat local" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-base sm:text-lg">Entrepreneuriat local</h3>
+                        <p class="text-sm text-gray-400 mt-1">
+                            Microcrédits et accompagnement pour les jeunes entrepreneurs qui font vivre Bukavu.
+                        </p>
+                        <a href="#" class="donate-btn mt-4 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-2 rounded-full transition">
+                            Faire un don
+                        </a>
+                    </div>
                 </div>
-                <!-- PRODUCT CARD -->
-                 <div class="group product-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
-                    <a href="product.html?id=4">
-                        <img src="./Assets/images/batoto ya bk white.png" alt="Bukavu Tee" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-base sm:text-lg"> Batoto ya bk blanc </h3>
-                            <p class="text-sm text-gray-500">Streetwear Collection</p>
-                            <div class="flex items-center justify-between mt-3">
-                                <span class="font-bold">$15</span>
-                                <span class="text-sm text-accent font-semibold">Voir plus</span>
-                            </div>
-                        </div>
-                    </a>
+
+                <!-- CAUSE CARD -->
+                <div class="group cause-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="autres">
+                    <img src="./Assets/images/communaute.png" alt="Projets communautaires" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-base sm:text-lg">Projets communautaires</h3>
+                        <p class="text-sm text-gray-400 mt-1">
+                            Initiatives culturelles, sportives et sociales portées par les habitants de Bukavu.
+                        </p>
+                        <a href="#" class="donate-btn mt-4 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-2 rounded-full transition">
+                            Faire un don
+                        </a>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
-    <!-- End section collection hoodie -->
+    <!-- End causes grid -->
 
          <!-- FOOTER -->
     <footer class="mt-10">
     <!-- Main container -->
         <div class="max-w-7xl mx-auto px-6 border-t border-gray-700">
-            
+
             <!-- Top content -->
             <div class="flex flex-col md:flex-row gap-10 md:gap-20 items-start md:items-center py-10">
-                
+
                 <!-- Brand -->
                 <div class="md:w-1/2">
                     <a href="./index.html" class="flex items-center gap-3">
@@ -173,12 +167,12 @@
 
                 <!-- Links & Social -->
                 <div class="md:w-1/2 flex flex-col sm:flex-row gap-10">
-                    
+
                     <!-- Quick links -->
                     <div>
                         <h3 class="font-bold text-gray-500 mb-3">Quick links</h3>
                         <ul class="flex flex-col gap-2 text-sm text-gray-500">
-                            <li><a href="#" class="hover:text-white">Accueil</a></li>
+                            <li><a href="./index.html" class="hover:text-white">Accueil</a></li>
                             <li><a href="./shop.html" class="hover:text-white">Shop</a></li>
                             <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
                             <li><a href="./business.html" class="hover:text-white">Cascadeurs</a></li>
@@ -199,12 +193,23 @@
 
             <!-- Bottom -->
             <div class="border-t border-gray-700 py-6 text-center text-sm text-gray-500">
-                <p>&copy 2025 Barhemula-Group. All rights reserved. Developped by <b class="hover:text-white"><a href="https://www.instagram.com/el_dixer/">El Dixer</a></b></p>
+                <p>&copy; 2025 Barhemula-Group. All rights reserved. Developped by <b class="hover:text-white"><a href="https://www.instagram.com/el_dixer/">El Dixer</a></b></p>
             </div>
 
         </div>
     </footer>
 
     <script src="./Assets/js/index.js"></script>
+    <script>
+        // Simple client-side filtering, no backend needed
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.category;
+                document.querySelectorAll('.cause-card').forEach(card => {
+                    card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
