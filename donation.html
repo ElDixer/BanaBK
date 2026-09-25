@@ -15,7 +15,7 @@
         <nav class="fixed top-6 w-[95%] h-[70px] flex justify-between items-center bg-gray-700/50 backdrop-blur-sm rounded-full z-50 px-10 border border-gray-700 relatve">
             <a href="./index.html" class="flex items-center gap-2 text-gray-500 hover:text-white">
                 <img src="./Assets/images/logo bkv afro white.png" class="w-12 h-12" />
-                <span class="font-bold hidden sm:block">BanaBK</span>
+                <span class="font-bold hidden sm:block">Batoto ya BK</span>
             </a>
             <div class="md:hidden cursor-pointer" id="burgermenu">
                 <img src="./Assets/images/menuicon.png" alt="" class="w-8 h-8">
@@ -28,7 +28,7 @@
                 <li><a href="./shop.html" class="hover:text-white">Shop</a></li>
                 <li><a href="./gallery.html" class="hover:text-white">Gallery</a></li>
                 <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
-                <li><a href="./business.html" class="hover:text-white">Donation</a></li>
+                <li><a href="./business.html" class="hover:text-white">Cascadeurs</a></li>
             </ul>
             <ul class="hidden w-1/2 font-bold text-slate-900 items-center absolute top-16 p-4 right-10 text-center bg-white rounded-md transition" id="menulist">
                 <li class="w-full h-10 flex items-center"><a href="./index.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Accueil</a></li>
@@ -43,9 +43,9 @@
   <!-- introduction -->
     <section class="text-center mt-36 max-w-7xl mx-auto flex">
         <div class="max-w-3xl px-4">
-            <h2 class="text-5xl font-bold text-left">BanaBK Funds</h2>
+            <h2 class="text-5xl font-bold text-left">Batoto ya BK Funds</h2>
             <p class="mt-10 text-gray-400 max-w-3xl text-justify leading-relaxed">
-                BanaBK Funds est une plateforme de collecte de fonds dédiée au soutien des habitants de Bukavu et ses environs
+                Batoto ya BK Funds est une plateforme de collecte de fonds dédiée au soutien des habitants de Bukavu
                 et de leurs initiatives. Notre mission est d'offrir un moyen simple, sécurisé et transparent de
                 soutenir des causes ayant un impact réel et mesurable au sein de notre communauté. <br><br>
 
@@ -86,56 +86,64 @@
 
                 <!-- CAUSE CARD -->
                 <div class="group cause-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="education">
-                    <img src="./Assets/images/education.jpg" alt="Éducation à Bukavu" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    <a href="campaign.html?id=1">
+                        <img src="./Assets/images/education.jpg" alt="Éducation à Bukavu" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    </a>
                     <div class="p-4">
-                        <h3 class="font-semibold text-base sm:text-lg">Éducation pour tous</h3>
+                        <a href="campaign.html?id=1"><h3 class="font-semibold text-base sm:text-lg hover:text-accent">Éducation pour tous</h3></a>
                         <p class="text-sm text-gray-400 mt-1">
                             Fournitures scolaires, frais de scolarité et soutien pédagogique pour les enfants de Bukavu.
                         </p>
-                        <a href="#" class="donate-btn mt-4 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-2 rounded-full transition">
-                            Faire un don
+                        <a href="campaign.html?id=1" class="donate-btn mt-4 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-2 rounded-full transition">
+                            Voir la campagne
                         </a>
                     </div>
                 </div>
 
                 <!-- CAUSE CARD -->
                 <div class="group cause-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="medical">
-                    <img src="./Assets/images/medical.png" alt="Aide médicale à Bukavu" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    <a href="campaign.html?id=2">
+                        <img src="./Assets/images/medical.png" alt="Aide médicale à Bukavu" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    </a>
                     <div class="p-4">
-                        <h3 class="font-semibold text-base sm:text-lg">Aide médicale d'urgence</h3>
+                        <a href="campaign.html?id=2"><h3 class="font-semibold text-base sm:text-lg hover:text-accent">Aide médicale d'urgence</h3></a>
                         <p class="text-sm text-gray-400 mt-1">
                             Accès aux soins de santé de base et aide d'urgence pour les familles dans le besoin.
                         </p>
-                        <a href="#" class="donate-btn mt-4 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-2 rounded-full transition">
-                            Faire un don
+                        <a href="campaign.html?id=2" class="donate-btn mt-4 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-2 rounded-full transition">
+                            Voir la campagne
                         </a>
                     </div>
                 </div>
 
                 <!-- CAUSE CARD -->
                 <div class="group cause-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="entreprise">
-                    <img src="./Assets/images/entrepreneuriat.png" alt="Entrepreneuriat local" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    <a href="campaign.html?id=3">
+                        <img src="./Assets/images/entrepreneuriat.png" alt="Entrepreneuriat local" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    </a>
                     <div class="p-4">
-                        <h3 class="font-semibold text-base sm:text-lg">Entrepreneuriat local</h3>
+                        <a href="campaign.html?id=3"><h3 class="font-semibold text-base sm:text-lg hover:text-accent">Entrepreneuriat local</h3></a>
                         <p class="text-sm text-gray-400 mt-1">
                             Microcrédits et accompagnement pour les jeunes entrepreneurs qui font vivre Bukavu.
                         </p>
-                        <a href="#" class="donate-btn mt-4 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-2 rounded-full transition">
-                            Faire un don
+                        <a href="campaign.html?id=3" class="donate-btn mt-4 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-2 rounded-full transition">
+                            Voir la campagne
                         </a>
                     </div>
                 </div>
 
                 <!-- CAUSE CARD -->
                 <div class="group cause-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="autres">
-                    <img src="./Assets/images/communaute.png" alt="Projets communautaires" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    <a href="campaign.html?id=4">
+                        <img src="./Assets/images/communaute.png" alt="Projets communautaires" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    </a>
                     <div class="p-4">
-                        <h3 class="font-semibold text-base sm:text-lg">Projets communautaires</h3>
+                        <a href="campaign.html?id=4"><h3 class="font-semibold text-base sm:text-lg hover:text-accent">Projets communautaires</h3></a>
                         <p class="text-sm text-gray-400 mt-1">
                             Initiatives culturelles, sportives et sociales portées par les habitants de Bukavu.
                         </p>
-                        <a href="#" class="donate-btn mt-4 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-2 rounded-full transition">
-                            Faire un don
+                        <a href="campaign.html?id=4" class="donate-btn mt-4 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-2 rounded-full transition">
+                            Voir la campagne
                         </a>
                     </div>
                 </div>
@@ -157,10 +165,10 @@
                 <div class="md:w-1/2">
                     <a href="./index.html" class="flex items-center gap-3">
                         <img src="./Assets/images/logo bkv afro white.png" alt="Bukavu Positive Logo" class="w-16 h-16">
-                        <p class="font-bold text-2xl">BanaBK</p>
+                        <p class="font-bold text-2xl">Batoto ya BK</p>
                     </a>
                     <p class="mt-3 text-base leading-relaxed">
-                        <b class="text-cyan-400">BanaBK</b>, La marque qui célèbre Bukavu, son énergie, sa culture et son futur.
+                        <b class="text-cyan-400">Batoto ya BK</b>, La marque qui célèbre Bukavu, son énergie, sa culture et son futur.
                     </p>
                 </div>
 
