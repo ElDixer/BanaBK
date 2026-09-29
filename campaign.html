@@ -27,7 +27,7 @@
                 <li><a href="./shop.html" class="hover:text-white">Shop</a></li>
                 <li><a href="./gallery.html" class="hover:text-white">Gallery</a></li>
                 <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
-                <li><a href="./donation.html" class="hover:text-white">Donation</a></li>
+                <li><a href="./business.html" class="hover:text-white">Cascadeurs</a></li>
             </ul>
             <ul class="hidden w-1/2 font-bold text-slate-900 items-center absolute top-16 p-4 right-10 text-center bg-white rounded-md transition" id="menulist">
                 <li class="w-full h-10 flex items-center"><a href="./index.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Accueil</a></li>
@@ -77,7 +77,7 @@
                     <p id="campaign-percent" class="text-xs text-gray-500 mt-1"></p>
                 </div>
 
-                <a id="campaign-donate-btn" href="#" class="donate-btn mt-8 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-3 rounded-full transition border border-gray-500">
+                <a id="campaign-donate-btn" href="#" class="donate-btn mt-8 block text-center font-semibold bg-accent hover:bg-white hover:text-slate-950 text-white py-3 rounded-full transition">
                     Faire un don
                 </a>
 
@@ -88,6 +88,10 @@
             <div class="md:col-span-2">
                 <h2 class="text-xl font-bold border-b border-gray-700 pb-3 mb-4">À propos de cette campagne</h2>
                 <p id="campaign-description" class="text-gray-400 leading-relaxed whitespace-pre-line"></p>
+
+                <h2 class="text-xl font-bold border-b border-gray-700 pb-3 mb-4 mt-10">Dons récents</h2>
+                <ul id="campaign-donations" class="divide-y divide-gray-800"></ul>
+                <p id="campaign-donations-empty" class="hidden text-gray-500 text-sm">Aucun don pour le moment. Soyez le premier à soutenir cette cause !</p>
 
                 <h2 class="text-xl font-bold border-b border-gray-700 pb-3 mb-4 mt-10">Comment votre don est utilisé</h2>
                 <ul id="campaign-usage" class="list-disc list-inside text-gray-400 space-y-2"></ul>
@@ -106,10 +110,10 @@
                 <div class="md:w-1/2">
                     <a href="./index.html" class="flex items-center gap-3">
                         <img src="./Assets/images/logo bkv afro white.png" alt="Bukavu Positive Logo" class="w-16 h-16">
-                        <p class="font-bold text-2xl">BanaBK</p>
+                        <p class="font-bold text-2xl">Batoto ya BK</p>
                     </a>
                     <p class="mt-3 text-base leading-relaxed">
-                        <b class="text-cyan-400">BanaBK</b>, La marque qui célèbre Bukavu, son énergie, sa culture et son futur.
+                        <b class="text-cyan-400">Batoto ya BK</b>, La marque qui célèbre Bukavu, son énergie, sa culture et son futur.
                     </p>
                 </div>
                 <div class="md:w-1/2 flex flex-col sm:flex-row gap-10">
@@ -119,7 +123,7 @@
                             <li><a href="./index.html" class="hover:text-white">Accueil</a></li>
                             <li><a href="./shop.html" class="hover:text-white">Shop</a></li>
                             <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
-                            <li><a href="./donation.html" class="hover:text-white">Donation</a></li>
+                            <li><a href="./business.html" class="hover:text-white">Cascadeurs</a></li>
                         </ul>
                     </div>
                     <div>
@@ -133,7 +137,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 py-6 text-center text-sm text-gray-500">
-                <p>&copy; 2026 BanaBK All rights reserved. Designed & Developped by <b class="hover:text-white"><a href="https://www.instagram.com/el_dixer/">El Dixer</a></b></p>
+                <p>&copy; 2025 Barhemula-Group. All rights reserved. Developped by <b class="hover:text-white"><a href="https://www.instagram.com/el_dixer/">El Dixer</a></b></p>
             </div>
         </div>
     </footer>
@@ -157,7 +161,17 @@
                 ],
                 organizer: "Campagne coordonnée par l'équipe Batoto ya BK en partenariat avec des associations locales à Bukavu.",
                 goal: 3000,
-                raised: 850
+                raised: 850,
+                // Add each new donation at the TOP of this list (newest first).
+                // Use name: "Anonyme" if the donor prefers not to be named.
+                // EXEMPLES — remplacez-les par vos vrais dons :
+                donations: [
+                    { name: "Jean M.", amount: 50, date: "2025-06-12" },
+                    { name: "Anonyme", amount: 20, date: "2025-06-10" },
+                    { name: "Anonyme", amount: 20, date: "2025-06-10" },
+                    { name: "Anonyme", amount: 20, date: "2025-06-10" },
+                    { name: "Anonyme", amount: 20, date: "2025-06-10" },
+                ]
             },
             2: {
                 category: "Medical",
@@ -172,7 +186,8 @@
                 ],
                 organizer: "Campagne coordonnée par l'équipe Batoto ya BK en partenariat avec des centres de santé locaux.",
                 goal: 4000,
-                raised: 1200
+                raised: 1200,
+                donations: []
             },
             3: {
                 category: "Entreprise",
@@ -187,7 +202,8 @@
                 ],
                 organizer: "Campagne coordonnée par l'équipe Batoto ya BK.",
                 goal: 5000,
-                raised: 600
+                raised: 600,
+                donations: []
             },
             4: {
                 category: "Autres",
@@ -202,7 +218,8 @@
                 ],
                 organizer: "Campagne coordonnée par l'équipe Batoto ya BK.",
                 goal: 2000,
-                raised: 300
+                raised: 300,
+                donations: []
             }
         };
 
@@ -237,6 +254,39 @@
             document.getElementById("campaign-goal").textContent = "Objectif : $" + campaign.goal;
             document.getElementById("campaign-bar").style.width = percent + "%";
             document.getElementById("campaign-percent").textContent = percent + "% de l'objectif atteint";
+
+            // Recent donations
+            const donationsEl = document.getElementById("campaign-donations");
+            const emptyEl = document.getElementById("campaign-donations-empty");
+            const donations = campaign.donations || [];
+            if (donations.length === 0) {
+                emptyEl.classList.remove("hidden");
+            } else {
+                donations.forEach(d => {
+                    const li = document.createElement("li");
+                    li.className = "flex items-center justify-between py-3";
+
+                    const left = document.createElement("div");
+                    const name = document.createElement("p");
+                    name.className = "font-semibold";
+                    name.textContent = d.name || "Anonyme";
+                    left.appendChild(name);
+                    if (d.date) {
+                        const date = document.createElement("p");
+                        date.className = "text-xs text-gray-500";
+                        date.textContent = new Date(d.date).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+                        left.appendChild(date);
+                    }
+
+                    const amount = document.createElement("span");
+                    amount.className = "font-bold text-accent";
+                    amount.textContent = "$" + d.amount;
+
+                    li.appendChild(left);
+                    li.appendChild(amount);
+                    donationsEl.appendChild(li);
+                });
+            }
 
             // TODO: replace "#" with your real payment link (PayPal.me, Stripe Payment Link, etc.)
             document.getElementById("campaign-donate-btn").href = "#";
