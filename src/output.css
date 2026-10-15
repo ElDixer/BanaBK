@@ -765,6 +765,10 @@ video {
   display: grid;
 }
 
+.\!grid {
+  display: grid !important;
+}
+
 .hidden {
   display: none;
 }
@@ -1142,6 +1146,11 @@ video {
   border-color: rgb(6 182 212 / 0.6);
 }
 
+.border-cyan-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(6 182 212 / var(--tw-border-opacity, 1));
+}
+
 .bg-\[\#0A1931\] {
   --tw-bg-opacity: 1;
   background-color: rgb(10 25 49 / var(--tw-bg-opacity, 1));
@@ -1483,6 +1492,10 @@ video {
 
 .grayscale {
   --tw-grayscale: grayscale(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 

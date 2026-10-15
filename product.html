@@ -121,7 +121,9 @@
         </h2>
 
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+            <!-- Filled at load time by the script at the bottom: random products taken from shop.html,
+                 never the product being viewed. The cards below are only a fallback if shop.html can't be read. -->
+            <div id="relatedGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
 
                 <!-- PRODUCT CARD -->
                 <div class="group product-card relative border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
@@ -195,16 +197,6 @@
         </div>
     </section>
     <!-- End related products -->
-
-    <!-- Start section businesses -->
-    <section>
-        <div class="bg-[#0A1931] text-gray-400 px-6 py-10">
-            <a href="./business.html" class="max-w-6xl mx-auto flex flex-col sm:flex-row gap-6 sm:gap-10 text-center sm:text-left justify-center items-center hover:text-white">
-                <p class="cursor-pointer text-sm sm:text-base">Cliquez ici pour découvrir les entreprises qui soutiennent <b class="text-cyan-400">BanaBK</b></p>
-                <div><img src="./Assets/images/rightarrow.png" alt="Flèche vers la droite" class="w-10 h-10 sm:w-12 sm:h-12 animate-pulse hover:animate-none cursor-pointer"></div>
-            </a>
-        </div>
-    </section>
 
     <footer class="mt-10">
         <div class="max-w-7xl mx-auto px-6 border-t border-gray-700">
@@ -291,6 +283,66 @@
                 title.textContent = "Sans puce NFC";
                 text.textContent = "Ce produit ne contient pas de puce NFC.";
             }
+        })();
+    </script>
+
+    <!-- Selected size: cyan border -->
+    <script>
+        document.addEventListener("click", function (e) {
+            const btn = e.target.closest(".size-btn");
+            if (!btn) return;
+            document.querySelectorAll(".size-btn").forEach(function (b) {
+                b.classList.remove("border-cyan-500");
+                b.classList.add("border-gray-500");
+                b.setAttribute("aria-pressed", "false");
+            });
+            btn.classList.remove("border-gray-500");
+            btn.classList.add("border-cyan-500");
+            btn.setAttribute("aria-pressed", "true");
+        });
+    </script>
+
+    <!-- Related products: random picks from the shop page, never the current product -->
+    <script>
+        (async function () {
+            const grid = document.getElementById("relatedGrid");
+            if (!grid) return;
+
+            const currentId = new URLSearchParams(window.location.search).get("id");
+            const idOf = function (card) {
+                const link = card.querySelector('a[href*="id="]');
+                const m = link && link.getAttribute("href").match(/id=([^&#]+)/);
+                return m ? m[1] : null;
+            };
+
+            // 1. Read the products from shop.html so new shop products show up here automatically
+            let cards = [];
+            try {
+                const res = await fetch("shop.html");
+                if (!res.ok) throw new Error("shop.html not readable");
+                const doc = new DOMParser().parseFromString(await res.text(), "text/html");
+                cards = Array.from(doc.querySelectorAll(".product-card")).map(function (c) {
+                    return document.importNode(c, true);
+                });
+            } catch (err) {
+                cards = [];
+            }
+            // 2. Fallback (e.g. page opened as a local file): use the cards already on this page
+            if (cards.length === 0) cards = Array.from(grid.querySelectorAll(".product-card"));
+
+            // 3. Remove the product being viewed, shuffle, keep up to 4
+            cards = cards.filter(function (c) { return idOf(c) !== currentId; });
+            for (let i = cards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                const tmp = cards[i]; cards[i] = cards[j]; cards[j] = tmp;
+            }
+            cards = cards.slice(0, 4);
+
+            if (cards.length === 0) {
+                grid.closest("section").classList.add("hidden");
+                return;
+            }
+            grid.replaceChildren.apply(grid, cards);
         })();
     </script>
 </body>
