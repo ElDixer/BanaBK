@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | BanaBK</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="bg-slate-950 text-white">
+
+    <!-- NFC BADGE (defined once, reused on product cards; looks like a verified badge with a wifi icon) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="nfc-badge" viewBox="0 0 24 24">
+            <path fill="#06b6d4" d="M23.2 12.0 L23.1 12.7 L22.8 13.4 L22.4 14.1 L22.0 14.7 L21.6 15.2 L21.3 15.8 L21.1 16.5 L20.9 17.2 L20.8 17.9 L20.6 18.6 L20.3 19.3 L19.9 19.9 L19.3 20.3 L18.6 20.6 L17.9 20.8 L17.2 20.9 L16.5 21.1 L15.8 21.3 L15.2 21.6 L14.7 22.0 L14.1 22.4 L13.4 22.8 L12.7 23.1 L12.0 23.2 L11.3 23.1 L10.6 22.8 L9.9 22.4 L9.3 22.0 L8.8 21.6 L8.2 21.3 L7.5 21.1 L6.8 20.9 L6.1 20.8 L5.4 20.6 L4.7 20.3 L4.1 19.9 L3.7 19.3 L3.4 18.6 L3.2 17.9 L3.1 17.2 L2.9 16.5 L2.7 15.8 L2.4 15.2 L2.0 14.7 L1.6 14.1 L1.2 13.4 L0.9 12.7 L0.8 12.0 L0.9 11.3 L1.2 10.6 L1.6 9.9 L2.0 9.3 L2.4 8.8 L2.7 8.2 L2.9 7.5 L3.1 6.8 L3.2 6.1 L3.4 5.4 L3.7 4.7 L4.1 4.1 L4.7 3.7 L5.4 3.4 L6.1 3.2 L6.8 3.1 L7.5 2.9 L8.2 2.7 L8.8 2.4 L9.3 2.0 L9.9 1.6 L10.6 1.2 L11.3 0.9 L12.0 0.8 L12.7 0.9 L13.4 1.2 L14.1 1.6 L14.7 2.0 L15.2 2.4 L15.8 2.7 L16.5 2.9 L17.2 3.1 L17.9 3.2 L18.6 3.4 L19.3 3.7 L19.9 4.1 L20.3 4.7 L20.6 5.4 L20.8 6.1 L20.9 6.8 L21.1 7.5 L21.3 8.2 L21.6 8.8 L22.0 9.3 L22.4 9.9 L22.8 10.6 L23.1 11.3Z"/>
+            <g fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round">
+                <path d="M9.53 13.73A3.5 3.5 0 0 1 14.47 13.73"/>
+                <path d="M7.55 11.75A6.3 6.3 0 0 1 16.45 11.75"/>
+                <path d="M5.57 9.77A9.1 9.1 0 0 1 18.43 9.77"/>
+            </g>
+            <circle cx="12" cy="16.2" r="1.3" fill="#fff"/>
+        </symbol>
+    </svg>
+
+  <!-- NAVBAR -->
+    <!-- Header and navbar start -->
+    <header class="flex items-center justify-center">
+        <nav class="fixed top-6 w-[95%] h-[70px] flex justify-between items-center bg-gray-700/50 backdrop-blur-sm rounded-full z-50 px-10 border border-gray-700 relatve">
+            <a href="./index.html" class="flex items-center gap-2 text-gray-500 hover:text-white">
+                <img src="./Assets/images/logo bkv afro white.png" class="w-12 h-12" />
+                <span class="font-bold hidden sm:block">BanaBK</span>
+            </a>
+            <div class="md:hidden cursor-pointer" id="burgermenu">
+                <img src="./Assets/images/menuicon.png" alt="" class="w-8 h-8">
+            </div>
+            <div class="hidden cursor-pointer" id="crossmenu">
+                <img src="./Assets/images/cross.png" alt="" class="w-8 h-8">
+            </div>
+            <ul class="hidden md:flex gap-10 font-bold text-gray-500 items-center">
+                <li><a href="./index.html" class="hover:text-white">Accueil</a></li>
+                <li><a href="./shop.html" class="hover:text-white">Shop</a></li>
+                <li><a href="./gallery.html" class="hover:text-white">Gallery</a></li>
+                <!-- <li><a href="./contact.html" class="hover:text-white">Contact</a></li> -->
+                <li><a href="./donation.html" class="hover:text-white">Donation</a></li>
+                <!-- <li class="relative">
+                    <img src="./Assets/images/cart-icon-gray.png" class="w-8 h-8" />
+                    <span class="absolute -top-2 -right-2 w-5 h-5 bg-white text-black text-xs rounded-full flex items-center justify-center">0</span>
+                </li> -->
+            </ul>
+            <ul class="hidden w-1/2 font-bold text-slate-900 items-center absolute top-16 p-4 right-10 text-center bg-white rounded-md transition" id="menulist">
+                <li class="w-full h-10 flex items-center"><a href="./index.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Accueil</a></li>
+                <li class="w-full h-10 flex items-cente"><a href="./shop.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Shop</a></li>
+                <li class="w-full h-10 flex items-center"><a href="./gallery.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Gallery</a></li>
+                <!-- <li class="w-full h-10 flex items-center"><a href="./contact.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Contact</a></li> -->
+                <li class="w-full h-10 flex items-center"><a href="./donation.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Donation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- PAGE HEADER -->
+    <section class="px-6 py-10 text-center mt-40">
+        <h2 class="text-3xl font-bold">Shop <b class="text-cyan-400">BanaBK</b></h2>
+        <p class="mt-2 text-gray-600">
+            Des vêtements streetwear inspirés par la culture, la fierté et la positivité.
+        </p>
+    </section>
+
+  <!-- FILTERS (UI ONLY) -->
+  <section class="px-6 mb-6">
+    <div class="flex text-center justify-center items-center mb-10">
+        <input 
+            type="search" 
+            id="searchInput" 
+            placeholder="Rechercher un produit..."
+            class="w-[40vw] h-12 rounded-l-xl p-3 pl-5 outline-none text-black">
+        <button 
+        id="searchBtn"
+        class="bg-[#0A1931]/20 text-white rounded-r-xl p-3 font-semibold border-gray-500 border hover:bg-[#0A1931]/90"> Rechercher</button>
+    </div>
+    <div class="flex flex-wrap gap-3 justify-center text-gray-500">
+      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="all">Tout</button>
+      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="tshirt">T-Shirts</button>
+      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="hoodie">Hoodies</button>
+      <button class="px-4 py-2 border border-gray-500 rounded-full text-sm hover:bg-accent hover:text-white" data-category="hat">Chapeau</button>
+    </div>
+  </section>
+
+  <!-- PRODUCTS GRID COLLECTION HOODIE -->
+    <section class="px-4 sm:px-6 pb-10">
+        <h2 class="text-center py-6 text-xl sm:text-2xl font-semibold">
+            Collection T-Shirts
+        </h2>
+
+        <!-- Container -->
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+
+                <!-- PRODUCT CARD -->
+                <div class="group product-card border border-gray-600 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt" >
+                    <a href="product.html?id=1">
+                        <img src="./Assets/images/batoto ya bk black.png" alt="Bukavu Tee" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-base sm:text-lg">BanaBK noir <!-- NFC badge: delete the <svg> below if this product has no NFC chip --><svg width="18" height="18" role="img" aria-label="Puce NFC intégrée" style="display:inline-block;vertical-align:-3px;margin-left:4px"><title>Puce NFC intégrée</title><use href="#nfc-badge"/></svg></h3>
+                            <p class="text-sm text-gray-500">Streetwear Collection</p>
+                            <div class="flex items-center justify-between mt-3">
+                                <span class="font-bold">$15</span>
+                                <span class="text-sm text-accent font-semibold">Voir</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- PRODUCT CARD -->
+                 <div class="group product-card border border-gray-600 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
+                    <a href="product.html?id=2">
+                        <img src="./Assets/images/batoto ya bk color.png" alt="Bukavu Tee" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-base sm:text-lg">BanaBK navy <!-- NFC badge: delete the <svg> below if this product has no NFC chip --><svg width="18" height="18" role="img" aria-label="Puce NFC intégrée" style="display:inline-block;vertical-align:-3px;margin-left:4px"><title>Puce NFC intégrée</title><use href="#nfc-badge"/></svg></h3>
+                            <p class="text-sm text-gray-500">Streetwear Collection</p>
+                            <div class="flex items-center justify-between mt-3">
+                                <span class="font-bold">$15</span>
+                                <span class="text-sm text-accent font-semibold">Voir</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- PRODUCT CARD -->
+                 <div class="group product-card border border-gray-600 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
+                    <a href="product.html?id=3">
+                        <img src="./Assets/images/batoto ya bk red.png" alt="Bukavu Tee" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-base sm:text-lg">BanaBK rouge <!-- NFC badge: delete the <svg> below if this product has no NFC chip --><svg width="18" height="18" role="img" aria-label="Puce NFC intégrée" style="display:inline-block;vertical-align:-3px;margin-left:4px"><title>Puce NFC intégrée</title><use href="#nfc-badge"/></svg></h3>
+                            <p class="text-sm text-gray-500">Streetwear Collection</p>
+                            <div class="flex items-center justify-between mt-3">
+                                <span class="font-bold">$15</span>
+                                <span class="text-sm text-accent font-semibold">Voir</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- PRODUCT CARD -->
+                 <div class="group product-card border border-gray-600 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
+                    <a href="product.html?id=4">
+                        <img src="./Assets/images/batoto ya bk white.png" alt="Bukavu Tee" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-base sm:text-lg">BanaBK blanc <!-- NFC badge: delete the <svg> below if this product has no NFC chip --><svg width="18" height="18" role="img" aria-label="Puce NFC intégrée" style="display:inline-block;vertical-align:-3px;margin-left:4px"><title>Puce NFC intégrée</title><use href="#nfc-badge"/></svg></h3>
+                            <p class="text-sm text-gray-500">Streetwear Collection</p>
+                            <div class="flex items-center justify-between mt-3">
+                                <span class="font-bold">$15</span>
+                                <span class="text-sm text-accent font-semibold">Voir</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<!-- End section collection hoodie -->
+
+     <!-- FOOTER -->
+    <footer class="mt-10">
+    <!-- Main container -->
+        <div class="max-w-7xl mx-auto px-6 border-t border-gray-700">
+            
+            <!-- Top content -->
+            <div class="flex flex-col md:flex-row gap-10 md:gap-20 items-start md:items-center py-10">
+                
+                <!-- Brand -->
+                <div class="md:w-1/2">
+                    <a href="./index.html" class="flex items-center gap-3">
+                        <img src="./Assets/images/logo bkv afro white.png" alt="Bukavu Positive Logo" class="w-16 h-16">
+                        <p class="font-bold text-2xl">BanaBK</p>
+                    </a>
+                    <p class="mt-3 text-base leading-relaxed">
+                        <b class="text-cyan-400">BanaBK</b>, La marque qui célèbre Bukavu, son énergie, sa culture et son futur.
+                    </p>
+                </div>
+
+                <!-- Links & Social -->
+                <div class="md:w-1/2 flex flex-col sm:flex-row gap-10">
+                    
+                    <!-- Quick links -->
+                    <div>
+                        <h3 class="font-bold text-gray-500 mb-3">Quick links</h3>
+                        <ul class="flex flex-col gap-2 text-sm text-gray-500">
+                            <li><a href="./index.html" class="hover:text-white">Accueil</a></li>
+                            <li><a href="#" class="hover:text-white">Shop</a></li>
+                            <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
+                            <li><a href="./donation.html" class="hover:text-white">Donation</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Social media -->
+                    <div>
+                        <h3 class="font-bold text-gray-500 mb-3">Social media</h3>
+                        <div class="flex gap-4">
+                            <a href="#"><img src="./Assets/images/instagram.png" alt="Instagram" class="w-8 h-8"></a>
+                            <a href="#"><img src="./Assets/images/facebook.png" alt="Facebook" class="w-8 h-8"> </a>
+                            <a href="#"><img src="./Assets/images/tiktok-logo.png" alt="TikTok" class="w-8 h-8"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="border-t border-gray-700 py-6 text-center text-sm text-gray-500">
+                <p>&copy; 2026 BanaBK All rights reserved. Designed & Developped by <b class="hover:text-white"><a href="https://www.instagram.com/el_dixer/">El Dixer</a></b></p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="./Assets/js/index.js"></script>
+    <script src="./Assets/js/products.js"></script>
+    <script src="./Assets/js/shop.js"></script>
+</body>
+</html>
