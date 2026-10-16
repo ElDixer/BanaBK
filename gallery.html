@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La galerie BanaBK : la collection, la puce NFC, les causes soutenues et la fierté de Bukavu en images.">
+    <title>Gallery | BanaBK</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="bg-slate-950 text-white">
+
+    <!-- Header and navbar start -->
+    <header class="flex items-center justify-center">
+        <nav class="fixed top-6 w-[95%] h-[70px] flex justify-between items-center bg-gray-700/50 backdrop-blur-sm rounded-full z-50 px-10 border border-gray-700">
+            <a href="./index.html" class="flex items-center gap-2 text-gray-500 hover:text-white">
+                <img src="./Assets/images/logo bkv afro white.png" alt="Logo BanaBK" class="w-12 h-12" />
+                <span class="font-bold hidden sm:block">BanaBK</span>
+            </a>
+            <div class="md:hidden cursor-pointer" id="burgermenu">
+                <img src="./Assets/images/menuicon.png" alt="Ouvrir le menu" class="w-8 h-8">
+            </div>
+            <div class="hidden cursor-pointer" id="crossmenu">
+                <img src="./Assets/images/cross.png" alt="Fermer le menu" class="w-8 h-8">
+            </div>
+            <ul class="hidden md:flex gap-10 font-bold text-gray-500 items-center">
+                <li><a href="./index.html" class="hover:text-white">Accueil</a></li>
+                <li><a href="./shop.html" class="hover:text-white">Shop</a></li>
+                <li><a href="./gallery.html" class="text-white">Gallery</a></li>
+                <li><a href="./donation.html" class="hover:text-white">Donation</a></li>
+                <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
+            </ul>
+            <ul class="hidden w-1/2 font-bold text-slate-900 items-center absolute top-16 p-4 right-10 text-center bg-white rounded-md transition" id="menulist">
+                <li class="w-full h-10 flex items-center"><a href="./index.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Accueil</a></li>
+                <li class="w-full h-10 flex items-center"><a href="./shop.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Shop</a></li>
+                <li class="w-full h-10 flex items-center"><a href="./gallery.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Gallery</a></li>
+                <li class="w-full h-10 flex items-center"><a href="./donation.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Donation</a></li>
+                <li class="w-full h-10 flex items-center"><a href="./contact.html" class="navlink flex justify-between w-full h-full bg-white items-center pl-3 pt-1 rounded-md">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--  end header and navbar -->
+
+    <!-- PAGE HEADER -->
+    <section class="pt-40 pb-10 px-6 text-center">
+        <p class="text-cyan-400 font-semibold uppercase tracking-widest text-sm">Gallery</p>
+        <h1 class="mt-3 text-4xl md:text-5xl font-extrabold">Bukavu en <b class="text-cyan-400">images</b></h1>
+        <p class="mt-4 text-gray-500 max-w-2xl mx-auto">
+            La collection, la puce NFC, les causes que nous soutenons et la fierté de Bukavu : découvrez l'univers <b class="text-cyan-400">BanaBK</b>.
+        </p>
+    </section>
+
+    <!-- FILTERS -->
+    <section class="px-6">
+        <div id="galleryFilters" class="flex flex-wrap gap-3 justify-center" role="group" aria-label="Filtrer la galerie"></div>
+        <p id="galleryCount" class="text-center text-sm text-gray-500 mt-4" aria-live="polite"></p>
+    </section>
+
+    <!-- GALLERY GRID -->
+    <section class="px-4 sm:px-6 py-8">
+        <div class="max-w-7xl mx-auto">
+            <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 grid-flow-dense"></div>
+            <noscript><p class="text-center text-gray-500">Activez JavaScript pour voir la galerie.</p></noscript>
+
+            <div class="mt-10 text-center">
+                <button id="galleryMore" type="button" class="hidden bg-[#10274b]/20 backdrop-blur-sm text-white px-6 py-3 rounded-md font-bold hover:bg-[#10274b]/85 transition border border-gray-600 hover:scale-105 ease-in-out duration-300">
+                    Voir plus
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="px-6 py-16">
+        <div class="max-w-4xl mx-auto rounded-xl border border-gray-600 bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80 p-8 sm:p-12 text-center">
+            <h2 class="text-2xl sm:text-3xl font-extrabold">Vous portez <b class="text-cyan-400">BanaBK</b> ?</h2>
+            <p class="mt-3 text-gray-400">Envoyez-nous votre photo et apparaissez dans la galerie.</p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/243904550059?text=Bonjour%2C%20je%20souhaite%20partager%20ma%20photo%20BanaBK%20dans%20la%20galerie%20!" target="_blank" rel="noopener" class="bg-cyan-500 text-slate-950 px-6 py-3 rounded-md font-bold hover:bg-cyan-400 transition">Envoyer ma photo</a>
+                <a href="./shop.html" class="px-6 py-3 rounded-md font-bold border border-gray-500 hover:bg-[#10274b]/85 transition">Découvrir la collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="hidden fixed inset-0 z-[60] bg-slate-950/95 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Aperçu de la photo">
+        <button id="lbClose" type="button" class="absolute top-5 right-5 w-11 h-11 rounded-full border border-gray-600 bg-gray-700/50 text-2xl leading-none hover:bg-gray-600 transition" aria-label="Fermer">&times;</button>
+        <button id="lbPrev" type="button" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-gray-600 bg-gray-700/50 text-2xl leading-none hover:bg-gray-600 transition" aria-label="Photo précédente">&lsaquo;</button>
+        <button id="lbNext" type="button" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-gray-600 bg-gray-700/50 text-2xl leading-none hover:bg-gray-600 transition" aria-label="Photo suivante">&rsaquo;</button>
+        <figure class="h-full flex flex-col items-center justify-center px-16 sm:px-24 py-16">
+            <img id="lbImage" src="" alt="" class="max-h-[75vh] max-w-full object-contain rounded-xl border border-gray-700">
+            <figcaption class="mt-5 text-center">
+                <p id="lbCategory" class="text-xs uppercase tracking-widest text-cyan-400 font-semibold"></p>
+                <p id="lbTitle" class="mt-1 text-lg font-semibold"></p>
+                <p id="lbCounter" class="mt-1 text-sm text-gray-500"></p>
+            </figcaption>
+        </figure>
+    </div>
+
+    <footer class="mt-10">
+        <div class="max-w-7xl mx-auto px-6 border-t border-gray-700">
+
+            <div class="flex flex-col md:flex-row gap-10 md:gap-20 items-start md:items-center py-10">
+
+                <!-- Brand -->
+                <div class="md:w-1/2">
+                    <a href="./index.html" class="flex items-center gap-3">
+                        <img src="./Assets/images/logo bkv afro white.png" alt="Logo BanaBK" class="w-16 h-16">
+                        <p class="font-bold text-2xl">BanaBK</p>
+                    </a>
+                    <p class="mt-3 text-base leading-relaxed">
+                        <b class="text-cyan-400">BanaBK</b>, la marque qui célèbre Bukavu, son énergie, sa culture et son futur.
+                    </p>
+                </div>
+
+                <!-- Links & Social -->
+                <div class="md:w-1/2 flex flex-col sm:flex-row gap-10">
+
+                    <div>
+                        <h3 class="font-bold text-gray-500 mb-3">Quick links</h3>
+                        <ul class="flex flex-col gap-2 text-sm text-gray-500">
+                            <li><a href="./index.html" class="hover:text-white">Accueil</a></li>
+                            <li><a href="./shop.html" class="hover:text-white">Shop</a></li>
+                            <li><a href="./gallery.html" class="hover:text-white">Gallery</a></li>
+                            <li><a href="./donation.html" class="hover:text-white">Donation</a></li>
+                            <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-gray-500 mb-3">Social media</h3>
+                        <div class="flex gap-4">
+                            <a href="#"><img src="./Assets/images/instagram.png" alt="Instagram" class="w-8 h-8"></a>
+                            <a href="#"><img src="./Assets/images/facebook.png" alt="Facebook" class="w-8 h-8"></a>
+                            <a href="#"><img src="./Assets/images/tiktok-logo.png" alt="TikTok" class="w-8 h-8"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 py-6 text-center text-sm text-gray-500">
+                <p>&copy; 2026 BanaBK. All rights reserved. Designed &amp; developed by <b class="hover:text-white"><a href="https://www.instagram.com/el_dixer/">El Dixer</a></b></p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="./Assets/js/index.js"></script>
+    <script>
+        /* ------------------------------------------------------------------
+           GALERIE : pour ajouter une photo, ajoutez UNE ligne dans la liste.
+           - src      : chemin de l'image
+           - title    : légende affichée au survol et dans l'aperçu
+           - category : "collection", "nfc", "communaute" ou "culture"
+                        (ou une nouvelle catégorie, déclarez-la dans `categories`)
+           - featured : true = grande vignette (2x2)
+           Ces images sont celles déjà présentes sur le site : remplacez-les
+           par vos vraies photos quand vous les avez.
+        ------------------------------------------------------------------ */
+        const categories = [
+            { id: "all", label: "Tout" },
+            { id: "collection", label: "Collection" },
+            { id: "nfc", label: "NFC" },
+            { id: "communaute", label: "Communauté" },
+            { id: "culture", label: "Culture" }
+        ];
+
+        const galleryItems = [
+            { src: "./Assets/images/batoto ya bk black.png", title: "BanaBK noir", category: "collection", featured: true },
+            { src: "./Assets/images/batoto ya bk color.png", title: "BanaBK navy", category: "collection" },
+            { src: "./Assets/images/batoto ya bk red.png", title: "BanaBK rouge", category: "collection" },
+            { src: "./Assets/images/elechip.png", title: "La puce NFC intégrée", category: "nfc", featured: true },
+            { src: "./Assets/images/batoto ya bk white.png", title: "BanaBK blanc", category: "collection" },
+            { src: "./Assets/images/helping.png", title: "Solidarité à Bukavu", category: "communaute" },
+            { src: "./Assets/images/education.png", title: "Éducation pour tous", category: "communaute" },
+            { src: "./Assets/images/medical.png", title: "Aide médicale d'urgence", category: "communaute" },
+            { src: "./Assets/images/entrepreneuriat.png", title: "Entrepreneuriat local", category: "communaute" },
+            { src: "./Assets/images/communaute.png", title: "Projets communautaires", category: "communaute" },
+            { src: "./Assets/images/afriq.jpg", title: "Fierté bukavienne", category: "culture" }
+        ];
+
+        // Photos are loaded by grid cells, not by count: a normal tile is 1 cell, a featured tile is 4 (2x2).
+        // 12 cells fill whole rows at 2, 3 and 4 columns, so the grid has no gaps until the very last photos.
+        const PAGE_CELLS = 12;
+        const cellsOf = function (item) { return item.featured ? 4 : 1; };
+
+        const labelOf = function (id) {
+            const c = categories.find(function (x) { return x.id === id; });
+            return c ? c.label : id;
+        };
+
+        const filtersEl = document.getElementById("galleryFilters");
+        const gridEl = document.getElementById("galleryGrid");
+        const countEl = document.getElementById("galleryCount");
+        const moreBtn = document.getElementById("galleryMore");
+
+        let activeCategory = "all";
+        let cellBudget = PAGE_CELLS;
+        let filtered = galleryItems.slice();
+
+        function visibleItems() {
+            let cells = 0;
+            const out = [];
+            for (let i = 0; i < filtered.length; i++) {
+                const size = cellsOf(filtered[i]);
+                if (cells + size > cellBudget) break;
+                cells += size;
+                out.push(filtered[i]);
+            }
+            return out;
+        }
+
+        function renderFilters() {
+            filtersEl.replaceChildren();
+            categories.forEach(function (cat) {
+                const btn = document.createElement("button");
+                btn.type = "button";
+                btn.textContent = cat.label;
+                const on = cat.id === activeCategory;
+                btn.setAttribute("aria-pressed", String(on));
+                btn.className = "px-4 py-2 rounded-full text-sm border transition " +
+                    (on ? "bg-cyan-500 border-cyan-500 text-slate-950 font-semibold"
+                        : "border-gray-500 text-gray-500 hover:text-white hover:border-white");
+                btn.addEventListener("click", function () {
+                    activeCategory = cat.id;
+                    cellBudget = PAGE_CELLS;
+                    renderFilters();
+                    renderGrid();
+                });
+                filtersEl.appendChild(btn);
+            });
+        }
+
+        function renderGrid() {
+            filtered = galleryItems.filter(function (it) {
+                return activeCategory === "all" || it.category === activeCategory;
+            });
+            gridEl.replaceChildren();
+
+            const visible = visibleItems();
+            visible.forEach(function (item, index) {
+                const tile = document.createElement("button");
+                tile.type = "button";
+                tile.setAttribute("aria-label", "Agrandir la photo : " + item.title);
+                tile.className = "gallery-item group relative overflow-hidden rounded-xl border border-gray-600 bg-[#10274b]/40 aspect-square text-left " +
+                    (item.featured ? "col-span-2 row-span-2" : "");
+
+                const img = document.createElement("img");
+                img.src = item.src;
+                img.alt = item.title;
+                img.loading = "lazy";
+                img.decoding = "async";
+                img.className = "absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500";
+                tile.appendChild(img);
+
+                const shade = document.createElement("div");
+                shade.className = "absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/10 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 group-focus-visible:opacity-100 transition duration-300";
+                tile.appendChild(shade);
+
+                const caption = document.createElement("div");
+                caption.className = "absolute bottom-0 inset-x-0 p-3 sm:p-4 opacity-100 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0 transition duration-300";
+                const cat = document.createElement("span");
+                cat.className = "block text-[11px] uppercase tracking-widest text-cyan-400 font-semibold";
+                cat.textContent = labelOf(item.category);
+                const title = document.createElement("span");
+                title.className = "block mt-0.5 font-semibold text-sm sm:text-base";
+                title.textContent = item.title;
+                caption.appendChild(cat);
+                caption.appendChild(title);
+                tile.appendChild(caption);
+
+                tile.addEventListener("click", function () { openLightbox(index); });
+                gridEl.appendChild(tile);
+            });
+
+            countEl.textContent = filtered.length === 0 ? "Aucune photo pour le moment."
+                : visible.length + " sur " + filtered.length + " photo" + (filtered.length > 1 ? "s" : "");
+            moreBtn.classList.toggle("hidden", visible.length >= filtered.length);
+        }
+
+        moreBtn.addEventListener("click", function () {
+            cellBudget += PAGE_CELLS;
+            renderGrid();
+        });
+
+        /* ---------------- Lightbox ---------------- */
+        const lb = document.getElementById("lightbox");
+        const lbImage = document.getElementById("lbImage");
+        const lbTitle = document.getElementById("lbTitle");
+        const lbCategory = document.getElementById("lbCategory");
+        const lbCounter = document.getElementById("lbCounter");
+        const lbClose = document.getElementById("lbClose");
+        const lbPrev = document.getElementById("lbPrev");
+        const lbNext = document.getElementById("lbNext");
+        let current = 0;
+        let lastFocus = null;
+
+        function showLightbox(i) {
+            const total = filtered.length;
+            current = (i + total) % total;
+            const item = filtered[current];
+            lbImage.src = item.src;
+            lbImage.alt = item.title;
+            lbTitle.textContent = item.title;
+            lbCategory.textContent = labelOf(item.category);
+            lbCounter.textContent = (current + 1) + " / " + total;
+            const single = total < 2;
+            lbPrev.classList.toggle("hidden", single);
+            lbNext.classList.toggle("hidden", single);
+        }
+        function openLightbox(i) {
+            lastFocus = document.activeElement;
+            showLightbox(i);
+            lb.classList.remove("hidden");
+            document.body.classList.add("overflow-hidden");
+            lbClose.focus();
+        }
+        function closeLightbox() {
+            lb.classList.add("hidden");
+            document.body.classList.remove("overflow-hidden");
+            if (lastFocus) lastFocus.focus();
+        }
+
+        lbClose.addEventListener("click", closeLightbox);
+        lbPrev.addEventListener("click", function () { showLightbox(current - 1); });
+        lbNext.addEventListener("click", function () { showLightbox(current + 1); });
+        lb.addEventListener("click", function (e) { if (e.target === lb || e.target.tagName === "FIGURE") closeLightbox(); });
+        document.addEventListener("keydown", function (e) {
+            if (lb.classList.contains("hidden")) return;
+            if (e.key === "Escape") closeLightbox();
+            else if (e.key === "ArrowLeft") showLightbox(current - 1);
+            else if (e.key === "ArrowRight") showLightbox(current + 1);
+        });
+
+        // swipe on phones
+        let touchX = null;
+        lb.addEventListener("touchstart", function (e) { touchX = e.touches[0].clientX; }, { passive: true });
+        lb.addEventListener("touchend", function (e) {
+            if (touchX === null) return;
+            const dx = e.changedTouches[0].clientX - touchX;
+            touchX = null;
+            if (Math.abs(dx) > 50) showLightbox(current + (dx < 0 ? 1 : -1));
+        });
+
+        renderFilters();
+        renderGrid();
+    </script>
+</body>
+</html>
