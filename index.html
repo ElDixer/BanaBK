@@ -27,9 +27,10 @@
                 <li><a href="./shop.html" class="hover:text-white">Shop</a></li>
                 <li><a href="./gallery.html" class="hover:text-white">Gallery</a></li>
                 <li><a href="./donation.html" class="hover:text-white">Donation</a></li>
+                <li><a href="./contact.html" class="hover:text-white">Contact</a></li>
                 <!-- <li class="relative">
                     <img src="./Assets/images/cart-icon-gray.png" class="w-8 h-8" />
-                    <span class="absolute -top-2 -right-2 w-5 h-5 bg-white text-black text-xs flex items-center justify-center">0</span>
+                    <span class="absolute -top-2 -right-2 w-5 h-5 bg-white text-black text-xs rounded-full flex items-center justify-center">0</span>
                 </li> -->
             </ul>
             <ul class="hidden w-1/2 font-bold text-slate-900 items-center absolute top-16 p-4 right-10 text-center bg-white rounded-md transition" id="menulist">
@@ -77,62 +78,72 @@
         <h2 class="text-center font-black text-3xl">Découvrez la collection <b class="text-cyan-400">BanaBK</b></h2>
         <p class="text-center text-base mt-3 text-gray-500">Designs modernes et unisexes</p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+        <!-- Filled at load time with the first 4 products of shop.html. The cards below are only a fallback
+             if shop.html can't be read (for example when the page is opened as a local file). -->
+        <div id="collectionGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
             <!-- PRODUCT CARD -->
-            <div class="group product-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
+            <div class="group product-card relative border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
                 <a href="product.html?id=1">
+                    <!-- NFC badge: delete this <img> line if this product has no NFC chip -->
+                    <img src="./Assets/images/nfclogo.png" alt="Puce NFC intégrée" title="Puce NFC intégrée" class="absolute top-3 left-3 z-10 w-9 h-9 object-contain drop-shadow-md pointer-events-none">
                     <img src="./Assets/images/batoto ya bk black.png" alt="T-shirt BanaBK noir" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
                     <div class="p-4">
                         <h3 class="font-semibold text-base sm:text-lg">BanaBK noir</h3>
                         <p class="text-sm text-gray-500">Streetwear Collection</p>
                         <div class="flex items-center justify-between mt-3">
                             <span class="font-bold">$15</span>
-                            <span class="text-sm text-accent font-semibold">Voir les détails</span>
+                            <span class="text-sm text-accent font-semibold">Voir</span>
                         </div>
                     </div>
                 </a>
             </div>
 
             <!-- PRODUCT CARD -->
-            <div class="group product-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
+            <div class="group product-card relative border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
                 <a href="product.html?id=2">
+                    <!-- NFC badge: delete this <img> line if this product has no NFC chip -->
+                    <img src="./Assets/images/nfclogo.png" alt="Puce NFC intégrée" title="Puce NFC intégrée" class="absolute top-3 left-3 z-10 w-9 h-9 object-contain drop-shadow-md pointer-events-none">
                     <img src="./Assets/images/batoto ya bk color.png" alt="T-shirt BanaBK bleu marine" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
                     <div class="p-4">
                         <h3 class="font-semibold text-base sm:text-lg">BanaBK navy</h3>
                         <p class="text-sm text-gray-500">Streetwear Collection</p>
                         <div class="flex items-center justify-between mt-3">
                             <span class="font-bold">$15</span>
-                            <span class="text-sm text-accent font-semibold">Voir les détails</span>
+                            <span class="text-sm text-accent font-semibold">Voir</span>
                         </div>
                     </div>
                 </a>
             </div>
 
             <!-- PRODUCT CARD -->
-            <div class="group product-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
+            <div class="group product-card relative border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
                 <a href="product.html?id=3">
+                    <!-- NFC badge: delete this <img> line if this product has no NFC chip -->
+                    <img src="./Assets/images/nfclogo.png" alt="Puce NFC intégrée" title="Puce NFC intégrée" class="absolute top-3 left-3 z-10 w-9 h-9 object-contain drop-shadow-md pointer-events-none">
                     <img src="./Assets/images/batoto ya bk red.png" alt="T-shirt BanaBK rouge" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
                     <div class="p-4">
                         <h3 class="font-semibold text-base sm:text-lg">BanaBK rouge</h3>
                         <p class="text-sm text-gray-500">Streetwear Collection</p>
                         <div class="flex items-center justify-between mt-3">
                             <span class="font-bold">$15</span>
-                            <span class="text-sm text-accent font-semibold">Voir les détails</span>
+                            <span class="text-sm text-accent font-semibold">Voir</span>
                         </div>
                     </div>
                 </a>
             </div>
 
             <!-- PRODUCT CARD -->
-            <div class="group product-card border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
+            <div class="group product-card relative border border-gray-500 rounded-xl overflow-hidden hover:shadow-lg transition bg-gradient-to-r from-[#10274b]/20 to-[#10274b]/80" data-category="tshirt">
                 <a href="product.html?id=4">
+                    <!-- NFC badge: delete this <img> line if this product has no NFC chip -->
+                    <img src="./Assets/images/nfclogo.png" alt="Puce NFC intégrée" title="Puce NFC intégrée" class="absolute top-3 left-3 z-10 w-9 h-9 object-contain drop-shadow-md pointer-events-none">
                     <img src="./Assets/images/batoto ya bk white.png" alt="T-shirt BanaBK blanc" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
                     <div class="p-4">
                         <h3 class="font-semibold text-base sm:text-lg">BanaBK blanc</h3>
                         <p class="text-sm text-gray-500">Streetwear Collection</p>
                         <div class="flex items-center justify-between mt-3">
                             <span class="font-bold">$15</span>
-                            <span class="text-sm text-accent font-semibold">Voir les détails</span>
+                            <span class="text-sm text-accent font-semibold">Voir</span>
                         </div>
                     </div>
                 </a>
@@ -148,11 +159,11 @@
 
     <!--  Start NFC SECTION -->
     <section>
-        <div class="mx-auto max-w-7xl px-6 md:px-16 lg:px-40 mt-24 flex flex-col lg:flex-row items-center gap-10 border-t border-gray-600">
+        <div class="mx-auto px-6 md:px-16 lg:px-40 mt-24 flex flex-col lg:flex-row items-center gap-10 max-w-7xl border-t border-gray-600">
             <div class="max-w-2xl">
                 <img src="./Assets/images/elechip.png" alt="Puce NFC intégrée dans un vêtement BanaBK" class="aspect-square object-cover w-full">
             </div>
-            <div class="flex-growgit ">
+            <div class="max-w-5xl">
                 <h3 class="text-2xl font-extrabold">Mode + Technologie : l'innovation <b class="text-cyan-400">BanaBK</b></h3>
                 <p class="text-base mt-6 text-gray-500">Chaque article BanaBK contient une puce NFC intégrée. En le touchant avec un smartphone,
                     vous accédez à notre mission, à nos projets communautaires et à la possibilité de faire un don. <br><br>
@@ -229,6 +240,22 @@
         </div>
     </section>
 
+    <!-- Start GALLERY PREVIEW (photos come from Assets/js/gallery-data.js, same as the gallery page) -->
+    <section class="px-4 sm:px-6 py-20 max-w-7xl mx-auto border-t border-gray-700">
+        <div class="text-center">
+            <p class="text-cyan-400 font-semibold uppercase tracking-widest text-sm">Gallery</p>
+            <h2 class="mt-3 text-3xl md:text-4xl font-extrabold">Bukavu en <b class="text-cyan-400">images</b></h2>
+            <p class="mt-4 text-gray-500 max-w-2xl mx-auto">La collection, la puce NFC, les causes que nous soutenons et la fierté de Bukavu.</p>
+        </div>
+        <div id="homeGallery" class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 grid-flow-dense"></div>
+        <div class="mt-10 text-center">
+            <a href="./gallery.html" class="inline-block bg-cyan-500 text-slate-950 px-6 py-3 rounded-md font-bold hover:bg-cyan-400 transition hover:scale-105 ease-in-out duration-300">
+                Voir toute la galerie
+            </a>
+        </div>
+    </section>
+    <!-- end gallery preview -->
+
     <section class="px-6 py-12 sm:px-10 sm:py-16 lg:px-20 lg:py-24 mt-10 text-white border-t border-gray-700">
         <h2 class="font-extrabold text-2xl sm:text-3xl lg:text-4xl text-center">Rejoignez le mouvement</h2>
         <div class="mt-8 sm:mt-10 flex flex-col gap-4 sm:gap-5 items-center text-center max-w-3xl mx-auto">
@@ -293,5 +320,33 @@
     </footer>
 
     <script src="./Assets/js/index.js"></script>
+    <script src="./Assets/js/gallery-data.js"></script>
+    <script>
+        // 1. Collection: show the first 4 products of the shop page
+        (async function () {
+            const grid = document.getElementById("collectionGrid");
+            if (!grid) return;
+            try {
+                const res = await fetch("shop.html");
+                if (!res.ok) throw new Error("shop.html not readable");
+                const doc = new DOMParser().parseFromString(await res.text(), "text/html");
+                const cards = Array.from(doc.querySelectorAll(".product-card")).slice(0, 4).map(function (c) {
+                    return document.importNode(c, true);
+                });
+                if (cards.length > 0) grid.replaceChildren.apply(grid, cards);
+            } catch (err) {
+                /* keep the fallback cards already in the page */
+            }
+        })();
+
+        // 2. Gallery preview: same first photos and same tiles as the gallery page; each tile opens the gallery
+        (function () {
+            const grid = document.getElementById("homeGallery");
+            if (!grid || typeof BanaGallery === "undefined") return;
+            BanaGallery.firstCells(BanaGallery.items, BanaGallery.PAGE_CELLS).forEach(function (item) {
+                grid.appendChild(BanaGallery.createTile(item, "a", "./gallery.html"));
+            });
+        })();
+    </script>
 </body>
 </html>
